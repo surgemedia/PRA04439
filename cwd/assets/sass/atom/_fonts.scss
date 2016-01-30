@@ -1,0 +1,215 @@
+$icon-font-path: '../fonts/';
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-BoldItalic.eot');
+	src: url($icon-font-path+'Gotham-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-BoldItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-BoldItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-BoldItalic.svg#Gotham-BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-ThinItalic.eot');
+	src: url($icon-font-path+'Gotham-ThinItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-ThinItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-ThinItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-ThinItalic.svg#Gotham-ThinItalic') format('svg');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Ultra';
+	src: url($icon-font-path+'Gotham-UltraItalic.eot');
+	src: url($icon-font-path+'Gotham-UltraItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-UltraItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-UltraItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-UltraItalic.svg#Gotham-UltraItalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Extra';
+	src: url($icon-font-path+'Gotham-ExtraLightItalic.eot');
+	src: url($icon-font-path+'Gotham-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-ExtraLightItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-ExtraLightItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-ExtraLightItalic.svg#Gotham-ExtraLightItalic') format('svg');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-Black.eot');
+	src: url($icon-font-path+'Gotham-Black.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Black.woff') format('woff'),
+		url($icon-font-path+'Gotham-Black.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Black.svg#Gotham-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-LightItalic.eot');
+	src: url($icon-font-path+'Gotham-LightItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-LightItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-LightItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-LightItalic.svg#Gotham-LightItalic') format('svg');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-Medium.eot');
+	src: url($icon-font-path+'Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Medium.woff') format('woff'),
+		url($icon-font-path+'Gotham-Medium.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Medium.svg#Gotham-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-Bold.eot');
+	src: url($icon-font-path+'Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Bold.woff') format('woff'),
+		url($icon-font-path+'Gotham-Bold.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Bold.svg#Gotham-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Ultra';
+	src: url($icon-font-path+'Gotham-Ultra.eot');
+	src: url($icon-font-path+'Gotham-Ultra.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Ultra.woff') format('woff'),
+		url($icon-font-path+'Gotham-Ultra.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Ultra.svg#Gotham-Ultra') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Extra';
+	src: url($icon-font-path+'Gotham-ExtraLight.eot');
+	src: url($icon-font-path+'Gotham-ExtraLight.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-ExtraLight.woff') format('woff'),
+		url($icon-font-path+'Gotham-ExtraLight.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-ExtraLight.svg#Gotham-ExtraLight') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-Thin.eot');
+	src: url($icon-font-path+'Gotham-Thin.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Thin.woff') format('woff'),
+		url($icon-font-path+'Gotham-Thin.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Thin.svg#Gotham-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-BlackItalic.eot');
+	src: url($icon-font-path+'Gotham-BlackItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-BlackItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-BlackItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-BlackItalic.svg#Gotham-BlackItalic') format('svg');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Book';
+	src: url($icon-font-path+'Gotham-BookItalic.eot');
+	src: url($icon-font-path+'Gotham-BookItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-BookItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-BookItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-BookItalic.svg#Gotham-BookItalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-Light.eot');
+	src: url($icon-font-path+'Gotham-Light.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Light.woff') format('woff'),
+		url($icon-font-path+'Gotham-Light.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Light.svg#Gotham-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Book';
+	src: url($icon-font-path+'Gotham-Book.eot');
+	src: url($icon-font-path+'Gotham-Book.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-Book.woff') format('woff'),
+		url($icon-font-path+'Gotham-Book.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-Book.svg#Gotham-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url($icon-font-path+'Gotham-MediumItalic.eot');
+	src: url($icon-font-path+'Gotham-MediumItalic.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Gotham-MediumItalic.woff') format('woff'),
+		url($icon-font-path+'Gotham-MediumItalic.ttf') format('truetype'),
+		url($icon-font-path+'Gotham-MediumItalic.svg#Gotham-MediumItalic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+}
+
+/* Generated by Glyphter (http://www.glyphter.com) on  Tue Jan 26 2016*/
+@font-face {
+    font-family: 'Glyphter';
+    src: url($icon-font-path+'Glyphter.eot');
+    src: url($icon-font-path+'Glyphter.eot?#iefix') format('embedded-opentype'),
+         url($icon-font-path+'Glyphter.woff') format('woff'),
+         url($icon-font-path+'Glyphter.ttf') format('truetype'),
+         url($icon-font-path+'Glyphter.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='pe-icon-']:before{
+	display: inline-block;
+   font-family: 'Glyphter';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.pe-icon-news:before{content:'\0041';}
+.pe-icon-youtube:before{content:'\0042';}
+.pe-icon-tools:before{content:'\0043';}
+.pe-icon-print:before{content:'\0044';}
+.pe-icon-about:before{content:'\0045';}
+.pe-icon-telephone:before{content:'\0046';}
+.pe-icon-projects:before{content:'\0047';}
+.pe-icon-play:before{content:'\0048';}
+.pe-icon-map:before{content:'\0049';}
+.pe-icon-postal:before{content:'\004a';}
+.pe-icon-fax:before{content:'\004b';}
+.pe-icon-linkedin:before{content:'\004c';}
+.pe-icon-fb:before{content:'\004d';}
+.pe-icon-brochure:before{content:'\004e';}
+.pe-icon-close:before{content:'\004f';}
+.pe-icon-drop:before{content:'\0050';}
+.pe-icon-email:before{content:'\0051';}
+.pe-icon-key-project:before{content:'\0052';}
