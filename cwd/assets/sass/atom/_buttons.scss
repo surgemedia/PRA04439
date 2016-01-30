@@ -1,0 +1,48 @@
+/*=============================
+=            Links            =
+=============================*/
+a {
+	color:$red;
+	&:hover {
+		color:$blue-dark;
+	}
+} 
+
+
+
+/*=============================
+=            Button          =
+=============================*/
+@mixin btn($text_color,$bg_color,$fill,$bg_hover){
+	color:$text_color;
+	background:rgba($bg_color,$fill);
+	padding: 1em 2em;
+	text-align:center;
+	font-family: $primary-font;
+	border-radius:0px;
+	&:hover {
+		background:rgba($bg_hover,$fill);
+	}
+
+}
+.btn.default {
+	@include btn($white,$blue_dark,0.9,$red);
+}
+.btn.red {
+	@extend .btn.default;
+	background:rgba($red,0.9);
+}
+.btn.blue {
+	@extend .btn.default;
+	background:rgba($blue,0.9);
+}
+
+
+
+
+
+
+
+
+
+
