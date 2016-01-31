@@ -21,3 +21,13 @@ p.book { font-size:1.8em; font-family: $secondary-font; }
 p.leading { font-size:2.4em; line-height:1.5em; margin-top:2.2em;  margin-bottom:2.2em; text-align:center;}
 p.medium.leading { font-size: 1.8em; }
 p.book.leading { font-size: 1.8em; }
+
+.custom-margin {
+	margin-left:7em;
+	margin-right:7em;
+
+}
+.custom-padding {
+	padding-left:7em;
+	padding-right:7em;
+}
