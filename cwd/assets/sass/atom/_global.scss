@@ -1,0 +1,33 @@
+body {
+	font-family:$primary-font;
+	line-height:1;
+	font-size:10px;
+	background:#fff;
+	color:$blue-dark;
+}
+h1,.h1 { font-size: 3em; margin-bottom: 1em; }
+h2,.h2 { font-size: 3em } 
+h3,.h3 { font-size: 2.4em } 
+h4,.h4 { font-size: 1.8em }
+h5,.h5 { font-size: 1.8em }
+strong,b {
+	font-family:$primary-font;
+}
+a { font-size: 1.6em; font-weight:400;}
+p { font-size:1.6em; font-family:$primary-font; font-weight:300; line-height:1.5em;}
+p.medium { font-size:1.8em; font-weight:500; }
+p.book { font-size:1.8em; font-family: $secondary-font; }
+
+p.leading { font-size:2.4em; line-height:1.5em; margin-top:2.2em;  margin-bottom:2.2em; text-align:center;}
+p.medium.leading { font-size: 1.8em; }
+p.book.leading { font-size: 1.8em; }
+
+.custom-margin {
+	margin-left:7em;
+	margin-right:7em;
+
+}
+.custom-padding {
+	padding-left:7em;
+	padding-right:7em;
+}

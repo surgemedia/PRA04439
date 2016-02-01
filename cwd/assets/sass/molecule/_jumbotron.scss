@@ -1,0 +1,14 @@
+.jumbotron {
+	height:82vh;
+	&.small {
+		height:57vh;
+	}
+	overflow:hidden;
+	padding-top:0em;
+	background-size:cover;
+	p {
+		font-family:$primary-font;
+	}
+}
+
+
