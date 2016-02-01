@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class=" -class ">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>Example include | Surge Media</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="/skin.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-submenu/2.0.3/js/bootstrap-submenu.js"></script>
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+<div class="container">
+	<div id="templates-buildtool" class="col-lg-6">	
+		<h2>Rendered Templates</h2>
+	</div>
+	<pre id="error-console" class="col-lg-6">	
+		
+	</pre>
+</div>
+
+<div id="resources-buildtool" class="container">
+		<h2>Resources</h2>
+		<p>Here are some places to find snippets</p>
+		<ul>
+			<li class="col-lg-4"><a href="http://cssdeck.com"><img src="/assets/images/logo-cssdeck.jpg" alt="Cssdeck"></a></li>
+			<li class="col-lg-4"><a href="http://codepen.io"><img src="/assets/images/logo-codepen.jpg" alt="Codepen"></a></li>
+			<li class="col-lg-4"><a href="http://bootsnipp.com/"><img src="/assets/images/logo-bootsnip.jpg" alt="bootsnip"></a></li>
+		</ul>
+	</div>	 
+<script>
+		$.getJSON('/template-list.json', function(json) {
+			console.log(json);
+			for (var i = json.length - 1; i >= 0; i--) {
+				console.log(json[i]['path'])
+				console.log(json[i]['path'].split('/'));
+				var html = "<li><a href='"+json[i]['path'].replace('render/',"")+"'>"+json[i]['path']+"</a></li>";
+				$('#templates-buildtool').append('<ul>');
+				$('#templates-buildtool').append(html)
+				$('#templates-buildtool').append('</ul>');
+
+			};
+		
+				/*optional stuff to do after success */
+		});
+			
+		</script>
+
+	
+
+
+		<script src="/assets/js/main.js"></script>
+	</body>	
+</html>

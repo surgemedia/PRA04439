@@ -1,0 +1,22 @@
+[
+    {
+        "path": "render/templates/collections/default.html",
+        "content": null
+    },
+    {
+        "path": "render/templates/layouts/default.html",
+        "content": null
+    },
+    {
+        "path": "render/templates/layouts/index.html",
+        "content": null
+    },
+    {
+        "path": "render/templates/pages/home.html",
+        "content": null
+    },
+    {
+        "path": "render/templates/pages/who-we-are.html",
+        "content": null
+    }
+]
