@@ -1,0 +1,79 @@
+#page-menu {
+    margin: 28.3vh 7em 0 7em;
+    display: block;
+    overflow: hidden;
+
+	h2 {
+		font-weight: 300;
+		margin: 0;
+		font-size:3.5em;
+		padding-left:3em;
+		padding-right:3em;
+		padding-top:0.5em;
+		background:rgba(#fff,0.8);
+		display:inline-block;
+		    overflow: hidden;
+		    float: left;
+		    clear: both;
+	}
+	.button-group {
+			padding-top:2em;
+			background:rgba(#fff,0.8);
+			display:inline-block;
+			padding-left:2em;
+			padding-right:2em;
+			padding-bottom: 2em;
+			overflow: hidden;
+		    float: left;
+		    clear: both;
+
+		    
+		a {
+			// border-bottom:0.7em solid rgba($red,0);
+		    display: inline-block;
+		    padding-top: 1.1em;
+		    padding-bottom: 1.1em;
+		    padding-left: 1em;
+		    padding-right: 1em;
+		    font-size:2.5em;
+		    margin-left: 0px;
+		    margin-right: 0.1em;
+		    margin-top: 0px;
+		    margin-bottom: 0px;
+		    content: "";
+		    position: relative;
+		    &::after {
+		    	opacity: 0;
+		    	height:0.7em;
+		    	background:#fff;
+		    	content:"";
+		    	display: block;
+			    width: 100%;
+			    position: absolute;
+			    bottom: -0.7em;
+			    left: 0px;
+			    transition: 0.3s ease all;
+		    }
+		    &.active {
+		    	background:#fff;
+		    	color:$red;
+			    transition: 0.3s ease all;
+					
+		    	 &::after {
+		    	 	opacity: 1;
+					background:#fff;
+		    	 }
+		    }
+		    &:hover {
+		    	text-decoration: none;
+		    	background:$red;
+		    	color:#fff;
+			    transition: 0.3s ease all;
+		    	 &::after {
+		    	 	opacity: 0;
+					background:#fff;
+		    	 }
+		    }
+		}
+	}
+}
