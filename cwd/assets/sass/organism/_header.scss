@@ -6,11 +6,13 @@
 	// padding:0em 0em;
 	padding:0em 15em 0em 5em;
 	margin: 0 7em;
-	border-bottom:0.7em solid $blue;
+	border-bottom:5px solid $blue;
 	display:block;
 	#main-nav {
 		width: 60%;
 		display:inline-block !important;
+		height: 140px !important;
+    	position: relative;
 	}
 	.navbar-brand {
 	    display: block;
@@ -24,6 +26,8 @@
 		clear:both;
 		display:block;
 	    width: 100%;
+	    position: absolute;
+    	bottom: 0px;
 	    li {
 	    	a {
 	    		color:#fff;
@@ -35,12 +39,12 @@
 	    			content:"";
 	    			&::after {
 	    				content:"";
-	    				border-bottom:7px solid $red;
+	    				border-bottom:5px solid $red;
 	    				    width: 100%;
 						    display: block;
 						    position: absolute;
 						    left: 0px;
-						    top: 3em;
+						    top: 100%;
 						    z-index:999;
 	    			}
 	    		}
@@ -104,7 +108,7 @@
 	}
 
 	.dropdown-menu {
-				margin-top: 1em !important;
+				margin-top: 0em !important;
 				background:transparent;
 				border:0px;
 				box-shadow:none;

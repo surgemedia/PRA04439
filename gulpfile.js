@@ -188,6 +188,7 @@ gulp.task('watcher', ['include', 'sass', 'js', 'imagemin', 'fonts'], function() 
     });
     gulp.watch("cwd/assets/sass/**/*", ['sass','image-move','imagemin']);
     gulp.watch("cwd/**/**/*.html", ['include']);
+    gulp.watch("cwd/templates/**/*.html", ['include']);
     gulp.watch("cwd/assets/images/*", ['image-move','imagemin']);
     gulp.watch("cwd/assets/js/*.js", ['js']);
     gulp.watch("cwd/**/**/*.html",['create-index'])

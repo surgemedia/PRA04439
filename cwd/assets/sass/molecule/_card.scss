@@ -67,7 +67,7 @@
 	}
 }
 /*=================================
-=            Card Icon            =
+=            Card Video          =
 =================================*/
 .card.video {
 	background-size: cover;
@@ -94,6 +94,21 @@
 		}
 	}
 }
+/*===================================
+=            Card People            =
+===================================*/
+.card.people {
+	h1 {
+		margin-bottom: 0;
+	}
+	h4 {
+		font-size:2.5em;
+		font-weight: 200;
+		color:#fff;
+		margin-bottom:1.3em;
+	}
+}
+
 
 
 

@@ -6,6 +6,8 @@
 @import "atom/fonts";  
 @import "atom/global";
 @import "atom/buttons";
+@import "atom/breadcrumb";
+
 
 // MOLECULES
 @import "molecule/jumbotron";
@@ -16,6 +18,10 @@
 //ORGANISMS
 @import "organism/footer";
 @import "organism/header";
+@import "organism/jumbo-menu";
+@import "organism/page-menu";
+
+
 
 
 //TEMPLATES
