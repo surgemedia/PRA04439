@@ -9,6 +9,7 @@ $icon-font-path: '/render/fonts/';
          url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.ttf'), '#{$icon-font-path}#{$icon-font-name}.ttf')) format('truetype'),
          url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
   }
+  
 @font-face {
 	font-family: 'Gotham';
 	src: url($icon-font-path+'Gotham-BoldItalic.eot');
