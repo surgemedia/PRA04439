@@ -6,8 +6,10 @@
 	</section>
 </main>
 <div class="container-fluid">
+[pbAdvPageSummary StartPage="Services"]
+	[HeaderTemplate]
+	[/HeaderTemplate]
 
-[pbAdvCollection Collection="1a2d11db-6965-42d8-b028-a6ac01b6182f" Sort="SortOrder"]
 	[ItemTemplate]
 		<include src="molecule/card.html" 
 						 class="red col-md-4" 
@@ -18,7 +20,17 @@
 			[Item.Summary]
 		</include>
 	[/ItemTemplate]
-[/pbAdvCollection ]
+
+	[NoDataTemplate]
+	[/NoDataTemplate]
+	[AlternatingItemTemplate]
+	[/AlternatingItemTemplate]
+	[FooterTemplate]
+	[/FooterTemplate]
+
+[/pbAdvPageSummary]
+
+
 
 
 <include src="molecule/card.html" class="red col-md-4" img="https://unsplash.it/616/200?image=20" title="Design & Construct"  >
