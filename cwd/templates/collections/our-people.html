@@ -1,15 +1,33 @@
-<pre>
-	<!-- Our People -->
+<pre class="col-lg-3">
 	[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
+	<!-- Our People -->
+		[FirstItemTemplate]
+			[Item.Name]
+			[Item.Summary]
+			[pbImage ImageName='Photo' FilenameOnly='true'] 
+			[pbContent RegionName="Content Item" StripHtml="True"] 
+		[/FirstItemTemplate]
+	[/pbAdvCollection]
+</pre>
 
+<pre class="col-lg-6">
+	Content Our People
+	[pbContent RegionName="Content" StripHtml="True"] 
+</pre>
+
+<pre class="col-lg-3">
+	[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
+	<!-- Our People -->
+		[FirstItemTemplate]
+		[/FirstItemTemplate]
 		[ItemTemplate]
 			[Item.Name]
+			[Item.Summary]
 			[pbImage ImageName='Photo' FilenameOnly='true'] 
-			[pbContent RegionName="Content" StripHtml="True"] 
-			<!--Inserts an editable content region that is managed in the console with a WYSIWYG editor. All pbContent tags must have a region name specified-->
+			[pbContent RegionName="Content Item" StripHtml="True"] 
 		[/ItemTemplate]
-	
 	[/pbAdvCollection]
 	 
 	
 </pre>
+
