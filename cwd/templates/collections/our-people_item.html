@@ -1,9 +1,14 @@
  <div class="clearfix">
 	<pre class="col-lg-3">
 		<!-- Our People -->
-		[pbImage ImageName='Photo' Visible='True' FilenameOnly='true'] 
-		[pbContent RegionName="Position" Visible='True' StripHtml="True"]
-		
+		<include src="molecule/card-people.html" 
+						 class="col-md-3 dark pull-left" 
+						 img="[pbImage ImageName='Photo' Visible='True' FilenameOnly='true'] " 
+						 title="[Item.Name]" 
+						 subtitle="[pbContent RegionName='Position' Visible='True' StripHtml='True']"  
+						 link="">
+				[Item.Summary]
+		</include>
 	</pre>
 	
 	<pre class="col-lg-6">
