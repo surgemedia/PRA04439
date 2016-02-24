@@ -1,0 +1,36 @@
+[pbHeadContent]
+<include src="atom/head.html" title="Home | PRA04439"></include>
+[/pbHeadContent]
+<div class="jumbotron small" style=' background-image: url("{skinfolder}/assets/images/ABOUT_US_BANNER.jpg");'>
+<include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
+<include src="molecule/social-bar.html" ></include>
+
+
+
+<div id="page-menu" class="col-lg-">
+	<h2>Services</h2>
+	<div class="button-group">
+		[pbAdvCollection Collection="1a2d11db-6965-42d8-b028-a6ac01b6182f" Sort="SortOrder" Mode="Page"]
+		<!--Services-->
+			[ItemTemplate]
+				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
+			[/ItemTemplate]
+		[/pbAdvCollection ]
+		<!-- <a class="h3-button active" href="">Who We Are</a>
+		<a class="h3-button" href="">Our Company</a>
+		<a class="h3-button" href="">Our People</a>
+		<a class="h3-button" href="">Careers</a>
+		<a class="h3-button" href="">Contact Us</a> -->
+	</div>
+</div>
+
+</div>
+[pbTemplate]
+
+<!-- FOOTER -->
+<div id="footer">
+	<include src="organism/footer.html" brand="Surge Media">
+	
+	</include>
+</div>
+<include src="atom/foot.html" ></include>
