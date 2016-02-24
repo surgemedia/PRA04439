@@ -1,2 +1,32 @@
- [pbImage ImageName='Photo' Visible='True' FilenameOnly='true'] 
- [pbContent RegionName="Content Item" Visible='True' StripHtml="True"]
+ <div class="clearfix">
+	<pre class="col-lg-3">
+		<!-- Our People -->
+		[pbImage ImageName='Photo' Visible='True' FilenameOnly='true'] 
+		[pbContent RegionName="Position" Visible='True' StripHtml="True"]
+		
+	</pre>
+	
+	<pre class="col-lg-6">
+		Content Our People
+		[pbContent RegionName="Content Item" Visible='True' StripHtml="True"]
+	</pre>
+	
+	
+	<pre class="col-lg-3">
+		<!-- Our People -->
+		[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
+			[FirstItemTemplate]
+			
+			[/FirstItemTemplate]
+			[ItemTemplate]
+				[Item.Name]
+				[pbImage ImageName='Photo' FilenameOnly='true'] 
+				[Item.Summary]
+			[/ItemTemplate]
+		
+		[/pbAdvCollection]
+		 
+		
+	</pre>
+</div>
+
