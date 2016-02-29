@@ -39,7 +39,16 @@
             [pbAdvCategory Collection="0db4b566-be31-4d4d-845a-85c210cf711a" Sort="SortOrder"]
               [ItemTemplate]
                 <li>
-                  <a href="[Item.PageUrl]">[Item.Name]</a>
+                  <a href="[Item.PageUrl]" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-submenu>[Item.Name]</a>
+                  <ul class="dropdown-menu">
+                    [pbAdvCategory Sort="SortOrder"]
+                    [ItemTemplate]
+                      <li>
+                        <a href="[Item.PageUrl]">[Item.Name]</a>
+                      </li>
+                    [/ItemTemplate]
+                  [/pbAdvCategory]
+                  </ul>
                 </li>
               [/ItemTemplate]
             [/pbAdvCategory]
