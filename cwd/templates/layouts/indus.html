@@ -10,9 +10,9 @@
 <div id="page-menu" class="col-lg-">
 	<h2>[Item.ParentName]</h2>
 	<div class="button-group">
-		[Item.ParentId]
+		
 		<!--Services-->
-		[pbAdvCategory Sort="SortOrder"]
+		[pbAdvCategory Collection={Item.ParentID} Sort="SortOrder"]
 			[ItemTemplate]
 				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
 			[/ItemTemplate]
