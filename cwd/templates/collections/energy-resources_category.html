@@ -3,12 +3,21 @@ Category
 	<pre class="col-lg-12">
 	[Item.Name] [Item.ID]
 	<h2>Products</h2>
-		[pbAdvCollection Mode="RelatedCategories"]
-			[ItemTemplate]
-				[Item.Name]
-				
-			[/ItemTemplate]
-		[/pbAdvCollection]
+		<script>
+			$.getJSON('/products.html', function(json) {
+				console.log(json);
+				for (var i = json.length - 1; i >= 0; i--) {
+					
+					var html = "<li><a href='"+json[i]['pageUrl']+"'>"+json[i]['Name']+"</a></li>";
+					$('#templates-buildtool').append('<ul>');
+					$('#templates-buildtool').append(html)
+					$('#templates-buildtool').append('</ul>');
+	​
+				};
+			
+					/*optional stuff to do after success */
+			});
+		</script>
 	</pre>
 	<pre class="col-lg-12">
 	<h2>Projects</h2>
