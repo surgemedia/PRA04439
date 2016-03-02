@@ -1,0 +1,33 @@
+[pbHeadContent]
+<include src="atom/head.html" title="Home | PRA04439"></include>
+[/pbHeadContent]
+<div class="jumbotron small" style=' background-image: url("{skinfolder}/assets/images/ABOUT_US_BANNER.jpg");'>
+	<include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
+	<include src="molecule/social-bar.html" ></include>
+	<pre>
+		[pbImage ImageName='Thumbnail' Visible='True' FilenameOnly='True']
+		[pbImage ImageName='Hero' Visible='True' FilenameOnly='True']  	
+	</pre>
+
+
+	<pre>
+	[Item.ParentName]
+	[Item.ParentID]
+		
+	</pre>
+	<include src="organism/industries-menu.html" 
+							 parentName="[Item.ParentName]" 
+							 parentId="[Item.ParentID]">
+			</include>
+
+
+</div>
+[pbTemplate]
+
+<!-- FOOTER -->
+<div id="footer">
+	<include src="organism/footer.html" brand="Surge Media">
+	
+	</include>
+</div>
+<include src="atom/foot.html" ></include>

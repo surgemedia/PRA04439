@@ -3,8 +3,8 @@
 	<div class="button-group">
 		
 		
-		<script>
-			$.getJSON('/home?template=industries-menu.html?oid=@@parentId', function(json) {
+		<!-- <script>
+			$.get('/home?template=industries-menu.html?oid=@@parentId', function(json) {
 			console.log(json);
 			/*for (var i = json.length - 1; i >= 0; i--) {
 				console.log(json[i]['path'])
@@ -13,14 +13,27 @@
 				$('#templates-buildtool').append('<ul>');
 				$('#templates-buildtool').append(html)
 				$('#templates-buildtool').append('</ul>');
-​
+		​
 			};*/
 		
 				/*optional stuff to do after success */
 		});
-
-
-		</script>
+			$.ajax({
+			  url: 'getTwitterFollowers.php',
+			  type: 'GET',
+			  data: 'twitterUsername=jquery4u',
+			  success: function(data) {
+				//called when successful
+				$('#ajaxphp-results').html(data);
+			  },
+			  error: function(e) {
+				//called when there is an error
+				//console.log(e.message);
+			  }
+			});
+		
+		
+		</script> -->
 
 		
 	</div>
