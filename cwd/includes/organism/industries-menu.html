@@ -2,16 +2,26 @@
 	<h2>@@parentName</h2>
 	<div class="button-group">
 		
-		<!--Services-->
-		[pbAdvCategory Sort="SortOrder"]
-			[ItemTemplate]
-				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
-			[/ItemTemplate]
-		[/pbAdvCategory]
-		<!-- <a class="h3-button active" href="">Who We Are</a>
-		<a class="h3-button" href="">Our Company</a>
-		<a class="h3-button" href="">Our People</a>
-		<a class="h3-button" href="">Careers</a>
-		<a class="h3-button" href="">Contact Us</a> -->
+		
+		<script>
+			$.getJSON('/industries-menu.html?oid=@@parentId', function(json) {
+			console.log(json);
+			/*for (var i = json.length - 1; i >= 0; i--) {
+				console.log(json[i]['path'])
+				console.log(json[i]['path'].split('/'));
+				var html = "<li><a href='"+json[i]['path'].replace('render/',"")+"'>"+json[i]['path']+"</a></li>";
+				$('#templates-buildtool').append('<ul>');
+				$('#templates-buildtool').append(html)
+				$('#templates-buildtool').append('</ul>');
+​
+			};*/
+		
+				/*optional stuff to do after success */
+		});
+
+
+		</script>
+
+		
 	</div>
 </div>
