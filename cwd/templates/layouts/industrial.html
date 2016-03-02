@@ -2,17 +2,16 @@
 <include src="atom/head.html" title="Home | PRA04439"></include>
 [/pbHeadContent]
 <div class="jumbotron small" style=' background-image: url("{skinfolder}/assets/images/ABOUT_US_BANNER.jpg");'>
-<include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
-<include src="molecule/social-bar.html" ></include>
+	<include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
+	<include src="molecule/social-bar.html" ></include>
 
-
-<include src="organism/jumbo-menu.html" ></include>
+</div>
 <div id="page-menu" class="col-lg-">
 	<h2>[Item.ParentName]</h2>
 	<div class="button-group">
 		
 		<!--Services-->
-		[pbAdvCategory Collection="05c0842d-a323-426b-8c3f-88c855999cad" Sort="SortOrder"]
+		[pbAdvCategory Sort="SortOrder"]
 			[ItemTemplate]
 				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
 			[/ItemTemplate]
@@ -23,8 +22,6 @@
 		<a class="h3-button" href="">Careers</a>
 		<a class="h3-button" href="">Contact Us</a> -->
 	</div>
-</div>
-
 </div>
 [pbTemplate]
 
