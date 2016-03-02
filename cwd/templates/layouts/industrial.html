@@ -5,24 +5,15 @@
 	<include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
 	<include src="molecule/social-bar.html" ></include>
 
-
-<div id="page-menu" class="col-lg-">
-	<h2>[Item.ParentName]</h2>
-	<div class="button-group">
-		
-		<!--Services-->
-		[pbAdvCategory Collection="{Item.ParentID}" Sort="SortOrder"]
-			[ItemTemplate]
-				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
-			[/ItemTemplate]
-		[/pbAdvCategory]
-		<!-- <a class="h3-button active" href="">Who We Are</a>
-		<a class="h3-button" href="">Our Company</a>
-		<a class="h3-button" href="">Our People</a>
-		<a class="h3-button" href="">Careers</a>
-		<a class="h3-button" href="">Contact Us</a> -->
-	</div>
-</div>
+<pre>
+[Item.ParentName]
+[Item.ParentID]
+	
+</pre>
+<include src="organism/industries-menu.html" 
+						 parentName="[Item.ParentName]" 
+						 parentId="[Item.ParentID]">
+		</include>
 </div>
 [pbTemplate]
 
