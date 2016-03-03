@@ -11,7 +11,11 @@
 	<h2>Services</h2>
 	<div class="button-group">
 		<!--Services-->
-		
+		[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder"]
+			[ItemTemplate]
+				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
+			[/ItemTemplate]
+		[/pbAdvCategory]
 		<!-- <a class="h3-button active" href="">Who We Are</a>
 		<a class="h3-button" href="">Our Company</a>
 		<a class="h3-button" href="">Our People</a>

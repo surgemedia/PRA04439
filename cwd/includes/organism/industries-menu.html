@@ -3,37 +3,11 @@
 	<div class="button-group">
 		
 		
-		<!-- <script>
-			$.get('/home?template=industries-menu.html?oid=@@parentId', function(json) {
-			console.log(json);
-			/*for (var i = json.length - 1; i >= 0; i--) {
-				console.log(json[i]['path'])
-				console.log(json[i]['path'].split('/'));
-				var html = "<li><a href='"+json[i]['path'].replace('render/',"")+"'>"+json[i]['path']+"</a></li>";
-				$('#templates-buildtool').append('<ul>');
-				$('#templates-buildtool').append(html)
-				$('#templates-buildtool').append('</ul>');
-		​
-			};*/
-		
-				/*optional stuff to do after success */
-		});
-			$.ajax({
-			  url: 'getTwitterFollowers.php',
-			  type: 'GET',
-			  data: 'twitterUsername=jquery4u',
-			  success: function(data) {
-				//called when successful
-				$('#ajaxphp-results').html(data);
-			  },
-			  error: function(e) {
-				//called when there is an error
-				//console.log(e.message);
-			  }
-			});
-		
-		
-		</script> -->
+		[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder"]
+			[ItemTemplate]
+				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
+			[/ItemTemplate]
+		[/pbAdvCategory]
 
 		
 	</div>
