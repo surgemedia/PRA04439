@@ -4,29 +4,18 @@
 <pre class="col-lg-4">
 	
 	<h2>pbAdvCategory</h2>
-	[pbAdvCategory Collection="0db4b566-be31-4d4d-845a-85c210cf711a" Sort="SortOrder"]
-		
+	[pbAdvCategory Sort="SortOrder"]
+		[FirstItemTemplate]
+
+		[/FirstItemTemplate]
 		[ItemTemplate]
 			[Item.Name]
-			[pbAdvCategory]
-		
-				[ItemTemplate]
-					[Item.Name]
-				[/ItemTemplate]
-			
-			[/pbAdvCategory]
+			[
 		[/ItemTemplate]
 	
 	[/pbAdvCategory]
 
-	<h2>pbMenu</h2>
-	[pbMenu ShowCategories="True" RootPath="industries"]	
 	
-	<h2>pbSiteMenu</h2>
-	[pbSiteMenu StartPage="services" ShowCategories="True"]	
-	
-	<h2>pbPanelMenu</h2>
-	[pbPanelMenu StartPage="services" ShowCategories="True"]
 
 	
 </pre>
@@ -43,7 +32,7 @@
 	<!--pbAdvCollection - Lists items within any collection using an unordered list. By default it will list items from the current collection but you can override this by specifying a Collection property | pbAdvBasicSearchResults - Lists items similar to pbAdvCollection, required to list results from a pbAdvBasicSearch | pbAdvCategory - Lists items within any category, simmilar to the pbAdvCollection-->
 	Item Category News
 
-	[pbAdvCollection Mode="RelatedCategories"]
+	[pbAdvCollection Mode="RelatedtoCategory"]
 		[ItemTemplate]
 			[Item.name]
 		[/ItemTemplate]
