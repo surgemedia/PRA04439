@@ -13,6 +13,13 @@
 		    text-align: center;
 		    padding:.5em 0;
 		    line-height: 20px;
+		    &.rmExpanded{
+		    	color: $red;
+		    	text-decoration: none;
+		    	&:after{
+		    		border-bottom: 2px solid $red;
+		    	}
+		    }
     		.rmText{
     			float:none;
     			padding:0;
