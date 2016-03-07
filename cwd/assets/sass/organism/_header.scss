@@ -35,10 +35,13 @@
     		width: 100% !important;
     		.rmVertical{
     			width: 100%;
+    			margin-top: 5px;
     			.rmItem{
     				width: 100%;
     				display: block;
+    				background:rgba($blue-dark,0.8);
     				.rmLink{
+    					text-decoration: none;
 							.rmText{
 								padding: 0;
 							}
