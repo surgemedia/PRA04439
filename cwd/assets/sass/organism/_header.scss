@@ -39,12 +39,14 @@
     			.rmItem{
     				width: 100%;
     				display: block;
+    				border-bottom: 1px solid rgba(#fff,0.8);
     			
     				.rmLink{
     					text-decoration: none;
     					padding:.5em 0;
 		    			line-height: 20px;
 		    			background:rgba($blue-dark,0.8);
+		    			border-right: 0;
 		    			&:hover{
 								background:rgba(#fff,0.8);
 								color: $red;			    				
