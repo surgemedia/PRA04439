@@ -17,7 +17,13 @@
 		    	color: $red;
 		    	text-decoration: none;
 		    	&:after{
-		    		border-bottom: 2px solid $red;
+		    		content: "";
+				    background: $red;
+				    height: 5px;
+				    width: 100%;
+				    position: absolute;
+				    left: 0;
+				    bottom: -5px;
 		    	}
 		    }
     		.rmText{
