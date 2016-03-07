@@ -51,6 +51,9 @@
 		    			}
 							.rmText{
 								padding: 0;
+								word-wrap: break-word;
+						    word-break: break-word;
+						    white-space: normal;
 							}
     				}
     			}
