@@ -13,18 +13,31 @@
 		    text-align: center;
 		    padding:.5em 0;
 		    line-height: 20px;
-		    &.rmExpanded{
+		    /* &.rmExpanded{
 		    	color: $red;
 		    	text-decoration: none;
 		    	&:after{
 		    		content: "";
+		    				    background: $red;
+		    				    height: 5px;
+		    				    width: 100%;
+		    				    position: absolute;
+		    				    left: 0;
+		    				    bottom: -5px;
+		    	}
+		    } */
+		    &:hover{
+					color: $red;
+		    	text-decoration: none;
+		    	&:after{
+			    	content: "";
 				    background: $red;
 				    height: 5px;
 				    width: 100%;
 				    position: absolute;
 				    left: 0;
 				    bottom: -5px;
-		    	}
+				  }
 		    }
     		.rmText{
     			float:none;
