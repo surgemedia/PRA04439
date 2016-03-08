@@ -5,7 +5,43 @@
 <include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
 <include src="molecule/social-bar.html" ></include>
 
+				<script>
 
+				var people=[
+[pbAdvCollection Collection="81041cdd-329e-4061-b73c-5b79bc49cce4"]
+				[ItemTemplate]
+
+							{
+								name:'[item.Name]'
+
+							},
+
+
+				[/ItemTemplate]
+[/pbAdvCollection ]
+		]
+
+				</script>
+<div class="people-template hidden">
+						{{#data}}
+							<div class="col-xs-3 grid-item staff staff-item" data-first="{{first}}" data-last="{{last}}" data-title="{{title}}" data-page="{{page}}">
+								<div class="img-wrapper">
+									<div class="overlay" data-page="{{page}}"></div>
+									<div class="headshot">
+										<img src="http://dev.advisian.surgehost.com.au{{image}}" alt="" class="img-responsive">
+									</div>
+								</div>
+								<p class="forza bold staff-name">{{first}} {{last}}</p>
+								<p class="forza staff-title">{{title}}</p>
+							</div>
+						{{/data}}
+						{{^data}}
+								<div><h3 style='text-align:center;'>No Results</h3></div>
+						{{/data}}
+						</div>
+<div class="result">
+	
+</div>
 
 <div id="page-menu" class="col-lg-">
 	<h2>About us</h2>
@@ -13,7 +49,7 @@
 		<!--About us-->
 		[pbAdvCollection Collection="81041cdd-329e-4061-b73c-5b79bc49cce4" Sort="SortOrder" Mode="Page"]
 			[ItemTemplate]
-				<a class="h3-button" href="[Item.PageUrl]">[Item.Name] [itemlookup.Services]</a>
+				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
 			[/ItemTemplate]
 		[/pbAdvCollection ]
 		<!-- <a class="h3-button active" href="">Who We Are</a>
