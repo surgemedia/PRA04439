@@ -1,13 +1,16 @@
 
 <pre class="col-lg-4">
 	<h2>Siblings </h2>
-	[pbAdvCategory Category="{thisobject.ParentName}"]
-		
-		[ItemTemplate]
-			[Item.Name]
-		[/ItemTemplate]
-	
-	[/pbAdvCategory]
+	[pbAdvItemCategorySummary]
+    [ItemTemplate]
+    	[Item.Name]
+      [pbAdvCollection]
+        [ItemTemplate]
+          [Item.Name]
+        [/ItemTemplate]
+			[/pbAdvCollection]
+    [/ItemTemplate]
+	[/pbAdvItemCategorySummary]
 	
 </pre>
 
