@@ -4,9 +4,22 @@
   <li><a href="#">About Us</a></li>
   <li class="active">Who We Are</li>
 </ol>
-<include src="molecule/card-people.html" class="col-md-3 dark pull-left" img="{skinfolder}/assets/images/ROD_TAIT_410x350.jpg" title="Rod Tait" subtitle="Director"  >
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ...
-</include>
+
+
+[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
+			[FirstItemTemplate]
+				<include src="molecule/card-people.html" 
+								 class="col-md-3 dark pull-left" 
+								 img="[pbImage ImageName='Photo' FilenameOnly='true']" 
+								 title="[Item.Name]" 
+								 subtitle="[pbContent RegionName='Position' StripHtml='True']"  
+								 link="[Item.PageUrl]">
+						[Item.Summary]
+				</include>
+			[/FirstItemTemplate]
+			[ItemTemplate]
+			[/ItemTemplate]
+		[/pbAdvCollection]
 
 	<section class="custom-padding col-md-9">
 	<h2>Who We are</h2>
