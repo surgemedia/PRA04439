@@ -4,8 +4,22 @@
 	i{
 		font-size: 6em;
 	}
+	ul{
+		list-style: none;
+		padding: 0;
+		li{
+			a{
+			  color:#fff;
+
+			}
+		}
+	}
+	a{
+		text-transform: uppercase;
+	}
 	.tittle{
 		font-size: 2.3em;
+		text-transform: uppercase;
 	}
 	.content{
 		margin-top: 3em;
@@ -16,16 +30,6 @@
     width: 100%;
     padding: 10% 6%;
 	}
-	ul{
-			list-style: none;
-			padding: 0;
-			li{
-				a{
-				  color:#fff;
-
-				}
-			}
-		}
 	.red{
 		color: #fff;
 		background-color: $red;
