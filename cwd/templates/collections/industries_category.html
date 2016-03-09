@@ -1,28 +1,26 @@
 <div class="clearfix">
 
-	<div class="product-card col-lg-3">
-		<div class="title">
-			<i class="pe-icon-tools"></i>
-			<h3>
-				<div>[Item.Name]</div>
-				<div>Products</div>
-			</h3>
-		</div>
+
+	<include src="molecule/card-left.html" 
+					 area="[Item.Name]">
 		[pbAdvCollection Collection="122cad56-53f9-4b32-98a2-4082d69c4b2a" Mode="RelatedToCategory"]
-			[HeaderTemplate]
-				<ul>
-			[/HeaderTemplate]
-			[ItemTemplate]
-					<li>
-						<a href="[Item.PageUrl]">[Item.Name]</a>
-					</li>
-			[/ItemTemplate]
-			[FooterTemplate]
-				</ul>
-			[/FooterTemplate]
-		[/pbAdvCollection]
-	</div>
-	
+		[HeaderTemplate]
+			<!--Products-->
+			<include src="molecule/card-left-title.html" 
+					     groupName="[Item.Name]">
+			</include>
+			<ul>
+		[/HeaderTemplate]
+		[ItemTemplate]
+				<li>
+					<a href="[Item.PageUrl]">[Item.Name]</a>
+				</li>
+		[/ItemTemplate]
+		[FooterTemplate]
+			</ul>
+		[/FooterTemplate]
+	[/pbAdvCollection]
+	</include>
 	
 	<pre class="col-lg-6">
 	
