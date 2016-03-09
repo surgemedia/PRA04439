@@ -1,13 +1,26 @@
 <div class="clearfix">
-Category
-	<div class="col-lg-3">
-	<i class="pe-icon-tools"></i><h3>Products</h3>
-		[pbAdvCollection Collection="122cad56-53f9-4b32-98a2-4082d69c4b2a" Mode="RelatedToCategory"]
-			[ItemTemplate]
-				<a href="[Item.PageUrl]">[Item.Name]</a>
-			[/ItemTemplate]
-		[/pbAdvCollection]
 
+	<div class="product-card col-lg-3">
+		<div class="title">
+			<i class="pe-icon-tools"></i>
+			<h3>
+				<p>[Item.Name]</p>
+				<p>Products</p>
+			</h3>
+		</div>
+		[pbAdvCollection Collection="122cad56-53f9-4b32-98a2-4082d69c4b2a" Mode="RelatedToCategory"]
+			[HeaderTemplate]
+				<ul>
+			[/HeaderTemplate]
+			[ItemTemplate]
+					<li>
+						<a href="[Item.PageUrl]">[Item.Name]</a>
+					</li>
+			[/ItemTemplate]
+			[FooterTemplate]
+				</ul>
+			[/FooterTemplate]
+		[/pbAdvCollection]
 	</div>
 	
 	
