@@ -10,43 +10,43 @@
 		height: 41.3em;
     display: inline-block;
 	}
-	.contact{
-		padding-left: 3%;
-		font-size: .9em;
-		ul{
-			list-style: none;
-			padding: 0;
-			li{
-				display: inline-block;
-				border-right: 1px solid $dark;
-				p{
-					font-family: $secondary-font;
-					font-weight: 900;
-				}
-				a{
-
-				}
-				&:last-child{
-					border-right: 0;
-				}
-			}
-		}
-	}
-	.info{
-		display: inline-block;
-		padding: 2% 3%;
-		h3{
-			text-transform: uppercase;
-		}
-		p{
-			height: 16em;
-			overflow: hidden;
-		}
-	}
 	.wrapper{
 		display: inline-block;
     height: 100%;
-    width: 100%;   
+    width: 100%;
+    .info{
+			display: inline-block;
+			padding: 2% 3%;
+			h3{
+				text-transform: uppercase;
+			}
+			p{
+				height: 16em;
+				overflow: hidden;
+			}
+		}  
+		.contact{
+			padding-left: 3%;
+			font-size: .9em;
+			ul{
+				list-style: none;
+				padding: 0;
+				li{
+					display: inline-block;
+					border-right: 1px solid $dark;
+					p{
+						font-family: $secondary-font;
+						font-weight: 900;
+					}
+					a{
+
+					}
+					&:last-child{
+						border-right: 0;
+					}
+				}
+			}
+		}
 	}
 	.red{
 		color: #fff;
