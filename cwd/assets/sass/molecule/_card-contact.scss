@@ -32,9 +32,12 @@
 				li{
 					display: inline-block;
 					border-right: 1px solid $dark;
+					padding-right: 1em;
+					padding-left: 1em;
 					p{
 						font-family: $secondary-font;
 						font-weight: 900;
+						margin: 0;
 					}
 					a{
 
