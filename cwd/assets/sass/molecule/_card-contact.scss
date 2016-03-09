@@ -28,6 +28,13 @@
 	}
 	.info{
 		display: inline-block;
+		h3{
+			text-transform: uppercase;
+		}
+		p{
+			height: 39em;
+			overflow: hidden;
+		}
 	}
 	.wrapper{
 		display: inline-block;
