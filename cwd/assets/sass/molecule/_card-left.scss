@@ -1,16 +1,15 @@
 .card-left{
-	padding-top: 5%;
-	padding-bottom: 5%;
-
+	padding-top: 2em;
+	padding-bottom: 2em;
+	height: 41.3em;
 	i{
 		font-size: 6em;
-	  text-align: right;
 	}
 	.tittle{
 		font-size: 2.3em;
 	}
 	.content{
-		margin-top: 1em;
+		margin-top: 3em;
 	}
 	&.red{
 		color: #fff;
@@ -21,7 +20,7 @@
 			li{
 				a{
 				  color:#fff;
-				  	
+
 				}
 			}
 		}
