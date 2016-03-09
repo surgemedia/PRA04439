@@ -1,6 +1,5 @@
 .card-left{
-	padding-top: 5em;
-	padding-bottom: 5em;
+	
 	height: 41.3em;
 	i{
 		font-size: 6em;
@@ -10,6 +9,13 @@
 	}
 	.content{
 		margin-top: 3em;
+	}
+	.content{
+		display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding-top: 5em;
+		padding-bottom: 5em;
 	}
 	.red{
 		color: #fff;
