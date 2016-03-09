@@ -22,17 +22,23 @@
 	[/pbAdvCollection]
 	</include>
 	
-	<pre class="col-lg-6">
 	
-	<h2>Contact</h2>
-		[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Mode="RelatedToCategory"]
+	
+		[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Mode="RelatedToCategory" MaxItems="1"]
 			[ItemTemplate]
+				<include src="molecule/card-left.html" 
+					 name="[Item.Name]"
+					 phone="[pbContent RegionName='Phone' StripHtml='True' Visible='True']"
+					 email="[pbContent RegionName='Email' StripHtml='True' Visible='True']"
+					 info="[pbContent RegionName='Content Item' StripHtml='False' Visible='True']"
+					 image="[pbImage ImageName='Photo' Visible='True' FilenameOnly='True']"
+					 background="grey">
+				</include>	 
 				[Item.Name]
 			[/ItemTemplate]
 		[/pbAdvCollection]
 
-	</pre>
-
+	
 	<pre class="col-lg-3">
 	
 	<h2>Menu</h2>
@@ -55,16 +61,6 @@
 			
 		[/pbAdvCollection]
 	</include>
-	<!-- <pre class="col-lg-3">
-	[Item.Name] [Item.ID]
-	<h2>News</h2>
-		
-	      [pbAdvCollection Collection="news" Mode="RelatedToCategory"]
-	        [ItemTemplate]
-	          [Item.Name]
-	        [/ItemTemplate]
-			[/pbAdvCollection]
-	  
 		
 	
 	</pre> -->
