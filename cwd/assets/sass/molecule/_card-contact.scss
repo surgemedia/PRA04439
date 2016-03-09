@@ -12,14 +12,22 @@
 	}
 	.contact{
 		
-		
+		font-size: .9em;
 		ul{
 		list-style: none;
 		padding: 0;
 		li{
 			display: inline-block;
+			border-right: 1px solid $dark;
+			p{
+				font-family: $secondary-font;
+				font-weight: 900;
+			}
 			a{
 
+			}
+			&:last-child{
+				border-right: 0;
 			}
 		}
 	}
