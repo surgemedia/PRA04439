@@ -1,14 +1,16 @@
 
 <div class="services-sidebar col-lg-4">
-	<ul>
-	[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder" ShowInvisible="True"]
-		[ItemTemplate]
-			<li>
-				<a href="[Item.PageUrl]">[Item.Name]</a>
-			</li>	
-		[/ItemTemplate]
-	[/pbAdvCategory]
-	</ul>
+	<div class="wrapper">
+		<ul>
+		[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder" ShowInvisible="True"]
+			[ItemTemplate]
+				<li>
+					<a href="[Item.PageUrl]">[Item.Name]</a>
+				</li>	
+			[/ItemTemplate]
+		[/pbAdvCategory]
+		</ul>
+	</div>
 	
 </div>
 
