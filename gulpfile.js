@@ -32,6 +32,8 @@ var gulp = require('gulp'),
  
 //This helps you with concatination Sass files in order
 var sass_files = [
+    'bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss',
+    'bower_components/bootstrap-sass-datepicker/sass/datepicker.scss',
     'cwd/assets/sass/all.scss'
     ];
 //This is used for HTML Lint
