@@ -1,0 +1,32 @@
+.card-project{
+	
+	height: 41.3em;
+	
+	
+	
+	.image{
+		height: 33em;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+	}
+	
+	.shade{
+		position: absolute;
+    bottom: 0;
+    height: 8em;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+	  .title,
+	  .subtitle{
+			color:#fff;
+		}  
+	}
+	.content{
+		p{
+			height:4em;
+		}
+	}
+	
+	
+}

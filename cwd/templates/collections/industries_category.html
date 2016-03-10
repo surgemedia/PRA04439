@@ -88,10 +88,11 @@
 		[pbAdvCollection]
 			[ItemTemplate]
 				<include src="molecule/card-project.html" 
-					 title="[Item.Name]"
+					 title="[pbContent RegionName='Company Name' StripHtml='False' Visible='True']"
+					 subTitle="[Item.Name]"
 					 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
 					 link="[Item.PageUrl]">
-					 [pbContent RegionName="Content Project" StripHtml="False" Visible="True"] 
+					 [pbContent RegionName="Content Project" StripHtml="True" Visible="True"] 
 				</include>	
 			[/ItemTemplate]
 		[/pbAdvCollection]
