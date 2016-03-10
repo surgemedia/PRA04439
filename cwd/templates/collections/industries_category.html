@@ -24,11 +24,12 @@
 	
 	[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Mode="RelatedToCategory" MaxItems="1"]
 		[ItemTemplate]
+			<!--We need to get the name of the category for Your %Category% Contact-->
 			<include src="molecule/card-contact.html" 
 				 name="[Item.Name]"
 				 phone="[pbContent RegionName='Phone' StripHtml='True' Visible='True']"
 				 email="[pbContent RegionName='Email' StripHtml='True' Visible='True']"
-				 info="[pbContent RegionName='Content Item' StripHtml='False' Visible='True']"
+				 info="[pbContent RegionName='Content Item' StripHtml='True' Visible='True']"
 				 image="[pbImage ImageName='Photo' Visible='True' FilenameOnly='True']"
 				 background="grey">
 			</include>	 
