@@ -1,11 +1,11 @@
 .card-project{
 	
-	height: 41.3em;
+	height: 53em;
 	
 	
 	
 	.image{
-		height: 33em;
+		height: 35em;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -14,11 +14,11 @@
 	.shade{
 		position: absolute;
     bottom: 0;
-    height: 8em;
+    height: 9em;
     background: rgba(0,0,0,.5);
     width: 100%;
-    padding: 1em;
-	  
+    padding: 2em;
+	  margin-bottom: 0.2em;
 	  .subtitle{
 			color:#fff;
 			font-size: 2.4em;
