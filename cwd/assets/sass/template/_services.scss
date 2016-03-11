@@ -2,6 +2,10 @@
 	.wrapper{
 		background-color:$grey;
 		padding: 2em;
+		h2{
+			text-transform: uppercase;
+			font-size: 2em;
+		}
 		.panel-group{
 			margin-left: -2em;
 			margin-right: -2em;
@@ -23,6 +27,9 @@
 			    		padding: 10px 15px;
 			    		color:$red;
 			    		text-transform: uppercase;
+			    		text-decoration: none;
+			    		font-size: 1.6em;
+    					font-weight: 300;
 			    		&:after{
 			    				content:"V";
 			    			}
