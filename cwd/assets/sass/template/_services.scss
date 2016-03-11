@@ -21,8 +21,18 @@
 			    		height: 100%;
 			    		width: 100%;
 			    		padding: 10px 15px;
+			    		color:$red;
+			    		text-transform: uppercase;
+			    		&:after{
+			    				content:"V";
+			    			}
 			    		&[aria-expanded="true"]{
 			    			background-color: #fff;
+			    			border:0;
+			    			&:after{
+			    				content:"X";
+
+			    			}
 			    		}
 			    	}
 			    }
