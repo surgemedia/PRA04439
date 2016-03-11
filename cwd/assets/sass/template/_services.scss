@@ -4,7 +4,6 @@
 		padding: 2em;
 		h2{
 			text-transform: uppercase;
-			font-size: 2em;
 		}
 		.panel-group{
 			margin-left: -2em;
@@ -38,7 +37,8 @@
 			    			border:0;
 			    			&:after{
 			    				content:"X";
-
+									position: absolute;
+									right: 0;
 			    			}
 			    		}
 			    	}
