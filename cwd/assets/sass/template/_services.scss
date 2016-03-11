@@ -1,13 +1,13 @@
 .service-content{
 	.wrapper{
 		background-color:$grey;
-		padding: 2em;
+		padding: 2em 4em;
 		h2{
 			text-transform: uppercase;
 		}
 		.panel-group{
-			margin-left: -2em;
-			margin-right: -2em;
+			margin-left: -4em;
+			margin-right: -4em;
 			.panel.panel-default{
 				border-radius: 0;
 				border: 0;
