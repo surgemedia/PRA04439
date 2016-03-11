@@ -3,12 +3,15 @@
 		background-color:$grey;
 		padding: 2em;
 		.panel-group{
-			/* margin-left: -2em; */
+			margin-left: -2em;
 			margin-right: -2em;
 			.panel.panel-default{
 				border-radius: 0;
 				border: 0;
 		    box-shadow: none;
+		    & + .panel{
+		    	margin-top: 0;
+		    }
 			}
 		}
 	}
