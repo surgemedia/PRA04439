@@ -9,8 +9,16 @@
 				border-radius: 0;
 				border: 0;
 		    box-shadow: none;
+		    border-bottom: 3px solid #fff;
 		    & + .panel{
 		    	margin-top: 0;
+		    }
+		    .panel-title{
+		    	a{
+		    		display: inline-block;
+		    		height: 100%;
+		    		width: 100%;
+		    	}
 		    }
 			}
 		}
