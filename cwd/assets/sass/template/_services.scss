@@ -13,13 +13,20 @@
 		    & + .panel{
 		    	margin-top: 0;
 		    }
-		    .panel-title{
-		    	a{
-		    		display: inline-block;
-		    		height: 100%;
-		    		width: 100%;
-		    	}
-		    }
+			  .panel-heading{
+			  	padding:0;
+			    .panel-title{
+			    	a{
+			    		display: inline-block;
+			    		height: 100%;
+			    		width: 100%;
+			    		padding: 10px 15px;
+			    		&[aria-expanded="true"]{
+			    			background-color: #fff;
+			    		}
+			    	}
+			    }
+			  }
 			}
 		}
 	}
