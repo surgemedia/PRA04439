@@ -1,47 +1,49 @@
-
-<div class="services-sidebar col-lg-4">
-	<div class="wrapper">
-		<ul>
-		[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder" ShowInvisible="True"]
-			[ItemTemplate]
-				<li>
-					<a href="[Item.PageUrl]">[Item.Name]</a>
-				</li>	
-			[/ItemTemplate]
-		[/pbAdvCategory]
-		</ul>
+<div class="clearfix">
+	
+	<div class="services-sidebar col-lg-4">
+		<div class="wrapper">
+			<ul>
+			[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder" ShowInvisible="True"]
+				[ItemTemplate]
+					<li>
+						<a href="[Item.PageUrl]">[Item.Name]</a>
+					</li>	
+				[/ItemTemplate]
+			[/pbAdvCategory]
+			</ul>
+		</div>
+		
 	</div>
 	
-</div>
-
-<div class="service-content col-lg-8"> 
-	<h2>[Item.Name]</h2>
-	[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
-	
-	<h2>Accordion</h2>
-	[pbAdvCollection]
+	<div class="service-content col-lg-8"> 
+		<h2>[Item.Name]</h2>
+		[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
 		
-		[ItemTemplate]
-			[Item.Name]
-		[/ItemTemplate]
-	
-	[/pbAdvCollection]
-	
-	
-	
-</div>
-
-<pre class="col-lg-12"> 
-	<h2>Projects</h2>
-	
-	[pbAdvCollection Mode="RelatedToCategory"]
+		<h2>Accordion</h2>
+		[pbAdvCollection]
+			
+			[ItemTemplate]
+				[Item.Name]
+			[/ItemTemplate]
 		
-		[ItemTemplate]
-			[Item.Name]
-		[/ItemTemplate]
+		[/pbAdvCollection]
+		
+		
+		
+	</div>
 	
-	[/pbAdvCollection]
-	
-	
-	
-</pre>
+	<pre class="col-lg-12"> 
+		<h2>Projects</h2>
+		
+		[pbAdvCollection Mode="RelatedToCategory"]
+			
+			[ItemTemplate]
+				[Item.Name]
+			[/ItemTemplate]
+		
+		[/pbAdvCollection]
+		
+		
+		
+	</pre>
+</div>
