@@ -13,6 +13,9 @@
 				border: 0;
 		    box-shadow: none;
 		    border-bottom: 3px solid #fff;
+		   	&:first-child{
+		   		border-top: 3px solid #fff;
+		   	}
 		    & + .panel{
 		    	margin-top: 0;
 		    }
