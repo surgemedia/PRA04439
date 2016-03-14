@@ -1,6 +1,6 @@
 <div class="clearfix">
 	
-	<div class="services-sidebar col-lg-4">
+	<div class="sidebar-categories col-lg-4">
 		<div class="wrapper">
 			<ul>
 			[pbAdvCategory Category="{ThisObject.ParentID}" Sort="SortOrder" ShowInvisible="True"]
@@ -58,8 +58,8 @@
 						 subTitle="[Item.Name]"
 						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
 						 link="[Item.PageUrl]">
-						 [pbContent RegionName="excerpt" StripHtml="True" Visible="True"] 
-					</include>
+					[pbContent RegionName="excerpt" StripHtml="True" Visible="True"] 
+				</include>
 			[/ItemTemplate]
 		
 		[/pbAdvCollection]

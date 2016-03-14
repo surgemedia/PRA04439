@@ -1,0 +1,6 @@
+.news-content{
+	@extended .services-content;
+	.subtitle{
+		color:$red;
+	}
+}

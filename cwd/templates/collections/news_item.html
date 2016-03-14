@@ -2,18 +2,24 @@
 	[pbImage ImageName='Hero' Visible='False' FilenameOnly='True']  	
 
 
-<div class="service-content col-lg-8"> 
+<div class="news-content col-lg-8"> 
 	<div class="wrapper">
-		<h2>[Item.Name]</h2>
+		[Item.CreatedDate]
+		<h2>
+			[pbContent RegionName="Company Name" StripHtml="True" Visible="False"]
+			<span class='subtitle'>
+				[Item.Name]
+			</span>
+		</h2>
+		
 		[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
-					create a title and place the content
 		
 	</div>
 </div>
 <pre class="col-lg-8">
 	[Item.Summary]
-
-	[pbContent RegionName="Content" StripHtml="" Visible="True"] 
+	
+	[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
 	<!--Inserts an editable content region that is managed in the console with a WYSIWYG editor. All pbContent tags must have a region name specified-->
 </pre>
 
@@ -37,7 +43,7 @@
 						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
 						 link="[Item.PageUrl]">
 						 [pbContent RegionName="excerpt" StripHtml="True" Visible="True"] 
-					</include>
+						</include>
 	        [/ItemTemplate]
 				[/pbAdvCollection]
 	    [/ItemTemplate]
