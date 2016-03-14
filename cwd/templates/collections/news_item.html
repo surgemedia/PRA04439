@@ -16,12 +16,6 @@
 		
 	</div>
 </div>
-<pre class="col-lg-8">
-	[Item.Summary]
-	
-	[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
-	<!--Inserts an editable content region that is managed in the console with a WYSIWYG editor. All pbContent tags must have a region name specified-->
-</pre>
 
 <div class="clearfix">
 	<div class="col-lg-12"> 
@@ -42,7 +36,7 @@
 						 subTitle="[Item.Name]"
 						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
 						 link="[Item.PageUrl]">
-						 [pbContent RegionName="excerpt" StripHtml="True" Visible="True"] 
+							[Item.Summary]
 						</include>
 	        [/ItemTemplate]
 				[/pbAdvCollection]
