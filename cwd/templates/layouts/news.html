@@ -4,17 +4,7 @@
 <div class="jumbotron small" style=' background-image: url("{skinfolder}/assets/images/ABOUT_US_BANNER.jpg");'>
 	<include src="organism/navbar.html" logo="{skinfolder}/assets/images/logo.png" extraClasses="" extraClassesNav="container"></include>
 	<include src="molecule/social-bar.html" ></include>
-	<pre>
-		[pbImage ImageName='Thumbnail' Visible='True' FilenameOnly='True']
-		[pbImage ImageName='Hero' Visible='True' FilenameOnly='True']  	
-	</pre>
-
-
-	<pre>
-	[Item.ParentName]
-	[Item.ParentID]
-		
-	</pre>
+	
 	<include src="organism/industries-menu.html" 
 							 parentName="[Item.ParentName]" 
 							 parentId="[Item.ParentID]">
@@ -24,21 +14,9 @@
 </div>
 [pbBreadcrumb IncludeCategories="True"]
 
-<div class="services-sidebar col-lg-4">
-	<div class="wrapper">
-		<ul>
-		[pbAdvCategory Collection="7ed168f3-f122-4cce-ab2d-5e83d2220df2" Sort="SortOrder"]
-			[ItemTemplate]
-				<li>
-					<a href="[Item.PageUrl]">[Item.Name]</a>
-				</li>	
-			[/ItemTemplate]
-		[/pbAdvCategory]
-		</ul>
-	</div>
-	
-</div>
-
+<include src="molecule/sidebar-categories.html" 
+							 collection="7ed168f3-f122-4cce-ab2d-5e83d2220df2">
+			</include>
 <!-- <pre class="col-lg-4">
 	
 	<h2>pbAdvCategory</h2>
