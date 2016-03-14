@@ -13,10 +13,27 @@
 		</h2>
 		
 		[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
-		[pbPageNav Mode="Previous" ControlType="Link" Text="Prev" SortField="Category"]
-		[pbPageNav Mode="Next" ControlType="Link" Text="Next" SortField="Category"]
+		[pbPageNav Mode="Previous" ControlType="Link" Text="Prev"]
+		[pbPageNav Mode="Next" ControlType="Link" Text="Next"]
 	</div>
 </div>
+<script>
+	var news=[
+		[pbAdvItemCategorySummary]
+		    [ItemTemplate]
+		    	[pbAdvCollection]
+		        [ItemTemplate]
+		          [Item.PageUrl],
+		        [/ItemTemplate]
+						[LastItemTemplate]
+							[Item.PageUrl]
+						[/LastItemTemplate]
+					[/pbAdvCollection]
+		    [/ItemTemplate]
+			[/pbAdvItemCategorySummary]
+		];
+		
+</script>
 
 <div class="clearfix">
 	<div class="col-lg-12"> 
