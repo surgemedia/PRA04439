@@ -17,24 +17,7 @@
 		[pbPageNav Mode="Next" ControlType="Link" Text="Next"]
 	</div>
 </div>
-<script type="javascript">
-	var news=[
-		[pbAdvItemCategorySummary]
-		    [ItemTemplate]
-		    	[pbAdvCollection]
-		        [ItemTemplate]
-		         " [Item.PageUrl] ",
-		        [/ItemTemplate]
-						[LastItemTemplate]
-						 " [Item.PageUrl] "
-						[/LastItemTemplate]
-					[/pbAdvCollection]
-		    [/ItemTemplate]
-			[/pbAdvItemCategorySummary]
-		];
-		var a = news.indexOf(window.location.href.split(window.location.host)[1]);
-		console.log(a);
-</script>
+
 
 <div class="clearfix">
 	<div class="col-lg-12"> 
@@ -63,3 +46,21 @@
 		[/pbAdvItemCategorySummary]
 	</div>
 </div>
+<script type="javascript">
+	var news=[
+		[pbAdvItemCategorySummary]
+		    [ItemTemplate]
+		    	[pbAdvCollection]
+		        [ItemTemplate]
+		         " [Item.PageUrl] ",
+		        [/ItemTemplate]
+						[LastItemTemplate]
+						 " [Item.PageUrl] "
+						[/LastItemTemplate]
+					[/pbAdvCollection]
+		    [/ItemTemplate]
+			[/pbAdvItemCategorySummary]
+		];
+		var a = news.indexOf(window.location.href.split(window.location.host)[1]);
+		console.log(a);
+</script>
