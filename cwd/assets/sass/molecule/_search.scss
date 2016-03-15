@@ -5,19 +5,36 @@
   padding-right: 2em;
   .textbox{
   	@extend .form-control;
+  	position: absolute;
+    right: 0;
+    top: 5em;
   }
   ul{
     li.submit:before{
-    	
-    		display: inline-block;
-			  font-family: 'Glyphter';
-			  font-style: normal;
-			  font-weight: normal;
-			  line-height: 1;
-			  -webkit-font-smoothing: antialiased;
-		   	-moz-osx-font-smoothing: grayscale;
-    		content:'\0054';
-    	
+    	content: "\e003";
+	   	display: inline-block;
+	    font-family: 'Glyphicons Halflings';
+	    font-style: normal;
+	    font-weight: normal;
+	    line-height: 0;
+	    -webkit-font-smoothing: antialiased;
+	    color: #000;
+	    right: 10px;
+	    position: absolute;
+	    top: 5em;
+	    font-size: 2em;
+    }
+    li.submit{
+    	input{
+    		background: transparent;
+			  border: 0;
+			  position: absolute;
+			  right: 0;
+			  z-index: 2;
+			  color: #000;
+			  top: 8.1em;
+			  height: 34px;
+    	}
     }
   }
 }
