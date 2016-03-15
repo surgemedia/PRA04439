@@ -1,6 +1,5 @@
 .news-content{
-	
-		.wrapper{
+	.wrapper{
 		background-color:$grey;
 		padding: 2em 4em;
 		h2{
@@ -9,55 +8,13 @@
 				color:$red;
 			}
 		}
-		.panel-group{
-			margin-left: -4em;
-			margin-right: -4em;
-			.panel.panel-default{
-				border-radius: 0;
-				border: 0;
-		    box-shadow: none;
-		    border-bottom: 3px solid #fff;
-		   	&:first-child{
-		   		border-top: 3px solid #fff;
-		   	}
-		    & + .panel{
-		    	margin-top: 0;
-		    }
-			  .panel-heading{
-			  	padding:0;
-			    .panel-title{
-			    	a{
-			    		display: inline-block;
-			    		height: 100%;
-			    		width: 100%;
-			    		padding: 20px 40px;
-			    		color:$red;
-			    		text-transform: uppercase;
-			    		text-decoration: none;
-			    		font-size: 1.6em;
-    					font-weight: 300;
-			    		&:after{
-			    				content:"V";
-			    			}
-			    		&[aria-expanded="true"]{
-			    			background-color: #fff;
-			    			border:0;
-			    			&:after{
-			    				content:"X";
-									position: absolute;
-									right: 50px;
-			    			}
-			    		}
-			    	}
-			    }
-			  }
-			  .panel-collapse{
-			  	.panel-body{
-			  		border:0;
-			  		padding: 40px;
-			  	}
-			  }
-			}
+		.footer{
+			border-top: 2px solid #fff;
+    	height: 6em;
+    	.next,.prev{
+    		line-height: 5;
+    		text-transform: uppercase;
+    	}
 		}
 	}
 }
