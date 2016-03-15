@@ -1,8 +1,9 @@
 #page-menu {
-    margin: 28.3vh 7em 0 7em;
+   
     display: block;
     overflow: hidden;
-
+		position:absolute;
+		top:47vh;
 	h2 {
 		font-weight: 300;
 		margin: 0;
@@ -24,9 +25,9 @@
 			padding-right:2em;
 			padding-bottom: 2em;
 			overflow: hidden;
-		    float: left;
-		    clear: both;
-
+	    float: left;
+	    clear: both;
+			min-width: 30.5em;
 		    
 		a {
 			// border-bottom:0.7em solid rgba($red,0);
