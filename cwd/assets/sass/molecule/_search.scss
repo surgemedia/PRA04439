@@ -6,4 +6,10 @@
     .textbox{
     	@extend .form-control;
     }
+    .submit{
+    	&:after{
+    		@extend [class*="pe-icon-"]
+    		@extend .pe-icon-magnifier;
+    	}
+    }
 }
