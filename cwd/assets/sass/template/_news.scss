@@ -10,9 +10,10 @@
 		}
 		.footer{
 			border-top: 2px solid #fff;
-    	height: 6em;
+    	height: 8em;
+    	text-align: center;
     	.next,.prev{
-    		line-height: 5;
+    		line-height: 7;
     		text-transform: uppercase;
     	}
     	.download,
@@ -20,8 +21,14 @@
     	.social{
     		display: inline-block;
 		    height: 6em;
-		    padding-top: 2em;
+		    padding-top: 3em;
 		    text-transform: uppercase;
+		    div{
+		    	padding-top:.5em;
+		    	i{
+		    		padding:0 .5em;
+		    	}
+		    }
     	}
 		}
 	}
