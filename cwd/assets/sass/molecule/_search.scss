@@ -7,9 +7,9 @@
     	@extend .form-control;
     }
     .submit{
-    	&:after{
-    		@extend [class*="pe-icon-"]
-    		@extend .pe-icon-magnifier;
+    	&:before{
+    		@extend [class*="pe-icon-"]:before
+    		@extend .pe-icon-magnifier:before;
     	}
     }
 }
