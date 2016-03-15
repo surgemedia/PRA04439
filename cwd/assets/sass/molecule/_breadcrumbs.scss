@@ -3,8 +3,16 @@
 		list-style: none;
 		li{
 			display: inline-block;
-			&.separator label{
+			&.separator .label{
 				color:#000;
+			}
+			span{
+				font-size: 1em;
+			}
+			&:nth-child(n+1){
+				span{
+					color:#000;
+				}
 			}
 		}
 	}
