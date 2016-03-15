@@ -7,7 +7,7 @@
   	@extend .form-control;
   }
   ul{
-    .submit{
+    li.submit{
     	&:before{
     		display: inline-block;
 			  font-family: 'Glyphter';
