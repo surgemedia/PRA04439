@@ -13,8 +13,8 @@
 		</h2>
 		
 		[pbContent RegionName="Content" StripHtml="False" Visible="True"] 
-		[pbPageNav Mode="Previous" ControlType="Link" Text="Prev"]
-		[pbPageNav Mode="Next" ControlType="Link" Text="Next"]
+		<a href="" class="prev">PREVIOUS</a>
+		<a href="" class="next">NEXT</a>
 	</div>
 </div>
 
@@ -64,6 +64,19 @@
 		for (var i = news.length - 1; i >= 0; i--) {
 			news[i]=news[i].split(".aspx")[0];
 		}
-		var a = news.indexOf(window.location.href.split(window.location.host)[1].split(".aspx")[0]);
-		console.log(a);
-</script>
+		var index = news.indexOf(window.location.href.split(window.location.host)[1].split(".aspx")[0]);
+		switch(index){
+			case 0:
+				jQuery(".prev").attr("href","");
+				jQuery(".next").attr("href", news[index+1]);
+			break;
+			case news.length:
+				jQuery(".prev").attr("href", news[index-1]);
+				jQuery(".next").attr("href", news[0]);
+			break;
+			default:
+				jQuery(".prev").attr("href", news[index-1]);
+				jQuery(".next").attr("href", news[index+1]);
+		}
+		
+	</script>
