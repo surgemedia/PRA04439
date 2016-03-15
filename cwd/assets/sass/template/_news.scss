@@ -10,7 +10,7 @@
 		}
 		.footer{
 			border-top: 2px solid #fff;
-    	height: 8em;
+    	height: 9em;
     	text-align: center;
     	.next,.prev{
     		line-height: 7;
@@ -23,6 +23,7 @@
 		    height: 6em;
 		    padding-top: 3em;
 		    text-transform: uppercase;
+		    min-width: 86px;
 		    div{
 		    	padding-top:.5em;
 		    	i{
