@@ -1,0 +1,11 @@
+.pbBreadcrumb{
+	.list{
+		list-style: none;
+		li{
+			display: inline-block;
+			&.separator label{
+				color:#000;
+			}
+		}
+	}
+}
