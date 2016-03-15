@@ -1,11 +1,12 @@
 .pbBasicSearch {
-    display: inline-block;
-    float: right;
-    text-align: right;
-    padding-right: 2em;
-    .textbox{
-    	@extend .form-control;
-    }
+  display: inline-block;
+  float: right;
+  text-align: right;
+  padding-right: 2em;
+  .textbox{
+  	@extend .form-control;
+  }
+  ul{
     .submit{
     	&:before{
     		display: inline-block;
@@ -18,4 +19,5 @@
     		content:'\0054';
     	}
     }
+  }
 }
