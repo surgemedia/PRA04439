@@ -6,8 +6,11 @@
   .textbox{
   	@extend .form-control;
   	position: absolute;
-    right: 0;
-    top: 5em;
+    right: -11px;
+    top: 4em;
+    width:26.5em;
+    border-radius: 0;
+
   }
   ul{
     li.submit:before{
