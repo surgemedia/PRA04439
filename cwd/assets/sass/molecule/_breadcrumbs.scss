@@ -8,10 +8,16 @@
 			}
 			span{
 				font-size: 1em;
+				a{
+					font-size: inherit;
+				}
 			}
 			&:nth-child(n+1){
 				span{
 					color:#000;
+					a{
+						color: inherit;
+					}
 				}
 			}
 		}
