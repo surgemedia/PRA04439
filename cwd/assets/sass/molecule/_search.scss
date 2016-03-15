@@ -7,8 +7,8 @@
   	@extend .form-control;
   }
   ul{
-    li.submit{
-    	&:before{
+    li.submit:before{
+    	
     		display: inline-block;
 			  font-family: 'Glyphter';
 			  font-style: normal;
@@ -17,7 +17,7 @@
 			  -webkit-font-smoothing: antialiased;
 		   	-moz-osx-font-smoothing: grayscale;
     		content:'\0054';
-    	}
+    	
     }
   }
 }
