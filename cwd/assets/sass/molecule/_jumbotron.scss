@@ -1,12 +1,13 @@
 .jumbotron {
-	height:82vh;
+	height:89em;
 	/* min-height: 77em; */
 	&.small {
-		height:57vh;
+		height:63em;
 	}
 	overflow:hidden;
 	padding-top:0em;
 	background-size:cover;
+	position:relative;
 	p {
 		font-family:$primary-font;
 	}
