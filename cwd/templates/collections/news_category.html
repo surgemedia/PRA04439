@@ -1,9 +1,14 @@
 
-<pre>
-		    	[pbAdvCollection MaxItems="1"] 
-		        [ItemTemplate]
-		        	[Item.name]
-		        [/ItemTemplate]
-					[/pbAdvCollection]
-		   
-		   </pre>
+		<script>    	
+			      	 function Redirect() {
+            
+			[pbAdvCollection MaxItems="1"] 
+					        [ItemTemplate]
+					     window.location="[Item.pageurl]";
+                        
+					        [/ItemTemplate]
+								[/pbAdvCollection]
+					  }
+					Redirect();   
+					   </script>
+		  
