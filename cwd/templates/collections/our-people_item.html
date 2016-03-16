@@ -14,27 +14,24 @@
 
 	
 	<section class="col-lg-6">
-		[pbContent RegionName="Content Item" Visible='True' StripHtml="True"]
+		[pbContent RegionName="Content Item" Visible='True' StripHtml="False"]
 	</section>
 	
 	
-	<pre class="col-lg-3">
+	<div class="col-lg-3">
 		<!-- Our People -->
 		[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
 			[FirstItemTemplate]
-			
 			[/FirstItemTemplate]
 			[ItemTemplate]
-				[Item.Name]
-				[pbImage ImageName='Photo' FilenameOnly='true'] 
-				[pbContent RegionName='Position' Visible='True' StripHtml='True']
-				[Item.Summary]
-				[Item.PageUrl]
+				<include src="molecule/headshot.html" 
+								 image="[pbImage ImageName='Photo' FilenameOnly='true' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg']"
+								 name="[Item.Name]" 
+								 position="[pbContent RegionName='Position' Visible='True' StripHtml='True']" 
+								 link="[Item.PageUrl]">
+				</include>
 			[/ItemTemplate]
-		
 		[/pbAdvCollection]
-		 
-		
-	</pre>
+	</div>
 </div>
 
