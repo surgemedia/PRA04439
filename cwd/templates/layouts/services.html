@@ -6,22 +6,30 @@
 <include src="molecule/social-bar.html" ></include>
 
 
-<div id="page-menu" class="col-lg-">
-	<h2>Services</h2>
-	<div class="button-group">
-	
-		[pbAdvCategory Collection="da6feeac-f673-4bf7-b1d7-3c94c195c573" Sort="SortOrder"]
-			[ItemTemplate]
-				<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
-			[/ItemTemplate]
-		[/pbAdvCategory]
-		
+	<div class="container-fluid custom-margin">
+		<div id="page-menu" class="col-lg-">
+			<h2>Services</h2>
+			<div class="button-group">
+			
+				[pbAdvCategory Collection="da6feeac-f673-4bf7-b1d7-3c94c195c573" Sort="SortOrder"]
+					[ItemTemplate]
+						<a class="h3-button" href="[Item.PageUrl]">[Item.Name]</a>
+					[/ItemTemplate]
+				[/pbAdvCategory]
+				
+			</div>
+		</div>
 	</div>
-</div>
 
 </div>
-[pbBreadcrumb IncludeCategories="True"]
-[pbTemplate]
+
+<div class="container-fluid custom-margin">
+	[pbBreadcrumb IncludeCategories="True"]
+</div>
+
+<div class="container-fluid custom-margin">
+	[pbTemplate]
+</div>
 
 <!-- FOOTER -->
 <div id="footer">
