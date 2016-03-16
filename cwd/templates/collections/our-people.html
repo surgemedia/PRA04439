@@ -26,12 +26,12 @@
 			[FirstItemTemplate]
 			[/FirstItemTemplate]
 			[ItemTemplate]
-				<div class="headshot" style="background-image: url([pbImage ImageName='Photo' FilenameOnly='true' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg'])">
-					<a href="[Item.PageUrl]">
-						<strong>[Item.Name]</strong>
-						<small>[pbContent RegionName='Position' Visible='True' StripHtml='True']</small>
-					</a>
-				</div>
+				<include src="molecule/headshot.html" 
+								 image="[pbImage ImageName='Photo' FilenameOnly='true' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg']"
+								 name="[Item.Name]" 
+								 position="[pbContent RegionName='Position' Visible='True' StripHtml='True']" 
+								 link="[Item.PageUrl]">
+				</include>
 			[/ItemTemplate]
 		[/pbAdvCollection]
 	</div>
