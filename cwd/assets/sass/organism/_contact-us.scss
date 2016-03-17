@@ -1,13 +1,59 @@
-#content .contact-us{
-	background:#000;
+.contact-us{
 	.detail{
+		padding: 0 4em;
 		div{
 			p{
 				i{
-					margin-right: .5em;
+				  margin-right: .5em;
 				  vertical-align: middle;
 				  font-size: 1.5em;
 				}
+				&:first-child{
+					margin-bottom: 0em;
+				}
+				&:last-child{
+					margin-bottom: 3em;
+				}
+			}
+		}
+	}
+	section.form{
+		background: $dark;
+		padding:4em;
+		.header{
+			color:#fff;
+			margin-bottom: 3em;
+			padding: 0 2em; 
+			h2{
+				margin-top: 0;
+				margin-bottom: 1em;
+			}
+		}
+		.pbForm{
+			div .hiddenElement{
+				display:none;
+			}
+			.textarea,
+			.textbox{
+				@extend .form-control;
+				border-radius: 0;
+			}
+			ul.form{
+				list-style: none;
+				padding: 0;
+				.item{
+					margin-bottom: 2em;
+				} 
+			}
+			input[type="submit"]{
+				background-color: $red;
+			    border: 0;
+			    padding: 15px 50px;
+			    font-size: 2.2em;
+			    text-transform: uppercase;
+			    color: #fff;
+			    float: right;
+			    font-weight: 600;
 			}
 		}
 	}

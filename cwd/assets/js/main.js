@@ -10,3 +10,30 @@
 
 
 // $('[data-submenu]').submenupicker();
+/*=============================================
+=               Print Article                 =
+=============================================*/
+function printPage(){
+        window.print();
+}
+
+/*=============================================
+=            Label           =
+=============================================*/
+
+$("form :input").each(function(index, elem) {
+    var eId = $(elem).attr("id");
+    var label = null;
+    var span;
+    if (eId && (label = $(elem).parents("form").find("label[for="+eId+"]")).length == 1) {
+        if ($(elem).parents("form").find("label[for="+eId+"] + span").length){
+          span=$(elem).parents("form").find("label[for="+eId+"] + span").html(); 
+           $($(elem).parents("form").find("label[for="+eId+"] + span")).remove();       
+        } else{
+          span='';
+        }
+        $(elem).attr("placeholder", $(label).html() + span);
+        
+        $(label).remove();
+    }
+ });
