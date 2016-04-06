@@ -5,7 +5,7 @@
 	right:0px;
 	top:35vh;
 	padding:0em 3.5em;
-	overflow:hidden;
+	/* overflow:hidden; */
 	z-index: 2;
 	a {
 		padding: 0.5em 0em;
@@ -16,6 +16,32 @@
 		color:#fff;
 		&:hover {
 			color:$red;
+			div{
+				width:180px;
+				transition: .3s ease width;
+				
+			}
+		}
+		div{
+			transition: .3s ease width;
+			position: absolute;
+		    right: 99px;
+		    background-color: $dark;
+		    font-size: .5em;
+		    padding: 1.5em 1em;
+		    overflow: hidden;
+		    width: 0px;
+		    word-break: none;
+		}
+		&.mail{
+			div{
+				top: 0px;
+			}
+		}
+		&.phone{
+			div{
+				top: 60px;
+			}
 		}
 	}
 }
