@@ -47,9 +47,9 @@
 		</div>
 	</div>
 	
-	<div class="col-lg-12"> 
+	<div class="col-lg-12 lower-cards"> 
 		<h2>[Item.Name] Projects</h2>
-		
+		<div id="category-name" class="hidden" data-category="[Item.Name]"></div>
 		[pbAdvCollection Mode="RelatedToCategory" MaxItems="4"]
 			
 			[ItemTemplate]
@@ -57,7 +57,8 @@
 						 title="[pbContent RegionName='Company Name' StripHtml='True' Visible='True']"
 						 subTitle="[Item.Name]"
 						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
-						 link="[Item.PageUrl]">
+						 link="[Item.PageUrl]"
+						 class="col-lg-6">
 					[pbContent RegionName="excerpt" StripHtml="True" Visible="True"] 
 				</include>
 			[/ItemTemplate]

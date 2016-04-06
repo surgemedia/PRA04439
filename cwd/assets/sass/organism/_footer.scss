@@ -60,5 +60,12 @@
 			}
 		}
 	}
-
+	.info{
+		a:after{
+			content:"|";
+		}
+		a:last-child:after{
+			content:"";
+		}	
+	}
 }

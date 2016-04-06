@@ -5,11 +5,27 @@
     background-size: cover;
     background-position: center;
     a{
-    	height: 100%;
+    	height: 0;
 	    width: 100%;
 	    display: block;
 	    color: #fff;
         text-align: center;
-        line-height: 8;
+        line-height: 2;
+        background-color: rgba(0,0,0,.5);
+        overflow:hidden;
+        text-decoration: none;
+        transition: .3s ease all;
+        div{
+            margin-top: 4em;
+            *{
+                display: block;
+            }
+        }
+    }
+    &:hover{
+        a{
+            height: 100%;
+            transition: .3s ease all;
+        }
     }
 }

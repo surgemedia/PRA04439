@@ -3,24 +3,26 @@
 		<h1>Contact Details</h1>
 		<p>Practical Engineering Australia Pty Ltd</p>
 		<div class="col-lg-12">
-			<p><strong><i class="pe-icon-email"></i>Email</strong></p>
-			<p>[pbContent RegionName="Email" StripHtml="True" Visible="True" ]</p>
-		</div>
-		<div class="col-lg-6">
-			<p><strong><i class="pe-icon-telephone"></i>Phone</strong></p>
-			<p>[pbContent RegionName="Phone" StripHtml="True" Visible="True" ]</p>
-		</div>
-		<div class="col-lg-6">
-			<p><strong><i class="pe-icon-fax"></i>Fax</strong></p>
-			<p>[pbContent RegionName="Fax" StripHtml="True" Visible="True" ]</p>
-		</div>
-		<div class="col-lg-6">
-			<p><strong><i class="pe-icon-map"></i>Address</strong></p>
-			<p>[pbContent RegionName="Address" StripHtml="True" Visible="True" ]</p>
-		</div>
-		<div class="col-lg-6">
-			<p><strong><i class="pe-icon-postal"></i>Postal</strong></p>
-			<p>[pbContent RegionName="Postal" StripHtml="True" Visible="True" ]</p>
+			<div class="col-lg-12">
+				<p><strong><i class="pe-icon-email"></i>Email</strong></p>
+				<a href="mailto:[pbContent RegionName="Email" StripHtml="True" Visible="True" ]">[pbContent RegionName="Email" StripHtml="True" Visible="True"]</a>
+			</div>
+			<div class="col-lg-6">
+				<p><strong><i class="pe-icon-telephone"></i>Phone</strong></p>
+				<a class="strip" href="tel:[pbContent RegionName="Phone" StripHtml="True" Visible="True" ]">[pbContent RegionName="Phone" StripHtml="True" Visible="True" ]</a>
+			</div>
+			<div class="col-lg-6">
+				<p><strong><i class="pe-icon-fax"></i>Fax</strong></p>
+				[pbContent RegionName="Fax" StripHtml="False" Visible="True" ]
+			</div>
+			<div class="col-lg-6">
+				<p><strong><i class="pe-icon-map"></i>Address</strong></p>
+				[pbContent RegionName="Address" StripHtml="False" Visible="True" ]
+			</div>
+			<div class="col-lg-6">
+				<p><strong><i class="pe-icon-postal"></i>Postal</strong></p>
+				[pbContent RegionName="Postal" StripHtml="False" Visible="True" ]
+			</div>
 		</div>
 	</section>
 
@@ -31,7 +33,7 @@
 		</div>
 		[pbForm] 
 	</section>
-	<section class="">
+	<section class="map">
 		[pbContent RegionName="Map" StripHtml="False" Visible="True" ] 
 	</section>
 </main>

@@ -7,7 +7,7 @@
 
 <div class="news-content col-lg-8"> 
 	<div class="wrapper">
-		<p>[Item.CreatedDateTime]</p>
+		<p>[Item.CreatedDateTime(dd MMMM, yyyy)]</p>
 		<h2>
 			<div>[pbContent RegionName="Company Name" StripHtml="True" Visible="True"]</div>
 			<span class='subtitle'>
@@ -52,11 +52,12 @@
 
 
 <div class="clearfix">
-	<div class="col-lg-12"> 
+	<div class="col-lg-12 lower-cards"> 
 		<h2>
 			[pbAdvItemCategorySummary]
 	    [ItemTemplate]
 	    	[Item.Name] News
+	    	<div id="category-name" class="hidden" data-category="[Item.Name]"></div>
 	    [/ItemTemplate]
 		[/pbAdvItemCategorySummary]
 		</h2>
@@ -69,7 +70,8 @@
 						 title="[pbContent RegionName='Company Name' StripHtml='True' Visible='True']"
 						 subTitle="[Item.Name]"
 						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
-						 link="[Item.PageUrl]">
+						 link="[Item.PageUrl]"
+						 class="col-lg-6">
 							[Item.Summary]
 						</include>
 	        [/ItemTemplate]
@@ -80,17 +82,17 @@
 </div>
 <script type="text/javascript">
 	var news=[
-		[pbAdvItemCategorySummary]
-		    [ItemTemplate]
-		    	[pbAdvCollection]
-		        [ItemTemplate]
-		         "[Item.PageUrl]",
-		        [/ItemTemplate]
+			[pbAdvItemCategorySummary]
+			    [ItemTemplate]
+			    	[pbAdvCollection]
+				        [ItemTemplate]
+				         "[Item.PageUrl]",
+				        [/ItemTemplate]
 						[LastItemTemplate]
 						 "[Item.PageUrl]"
 						[/LastItemTemplate]
 					[/pbAdvCollection]
-		    [/ItemTemplate]
+			    [/ItemTemplate]
 			[/pbAdvItemCategorySummary]
 		];
 		for (var i = news.length - 1; i >= 0; i--) {

@@ -1,30 +1,27 @@
 <div class="clearfix">
 		<!-- Our People -->
-		[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
-			[FirstItemTemplate]
-				<include src="molecule/card-people.html" 
+		[pbAdvCollection Filter="Featured='True'" Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
+			[ItemTemplate]
+			<include src="molecule/card-people.html" 
 								 class="col-md-3 dark pull-left" 
 								 img="[pbImage ImageName='Photo' FilenameOnly='true']" 
 								 title="[Item.Name]" 
-								 subtitle="[pbContent RegionName='Position' StripHtml='True']"  
-								 link="[Item.PageUrl]">
+								 subtitle="[pbContent RegionName='Position' StripHtml='True']">
 						[Item.Summary]
+						<a href="[Item.PageUrl]">Read More</a>
 				</include>
-			[/FirstItemTemplate]
-			[ItemTemplate]
 			[/ItemTemplate]
 		[/pbAdvCollection]
 
 	
 	<section class="padding-content col-lg-6">
+		<h2>[Item.Name]</h2>
 		[pbContent RegionName="Content" Visible="True" StripHtml="False"] 
 	</section>
 	
 	<div class="col-lg-3">
 		<!-- Our People -->
-		[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
-			[FirstItemTemplate]
-			[/FirstItemTemplate]
+		[pbAdvCollection Filter="Featured='False'" Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Sort="SortOrder"]
 			[ItemTemplate]
 				<include src="molecule/headshot.html" 
 								 image="[pbImage ImageName='Photo' FilenameOnly='true' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg']"

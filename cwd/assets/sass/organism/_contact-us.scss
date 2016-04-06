@@ -15,6 +15,15 @@
 					margin-bottom: 3em;
 				}
 			}
+			a{	
+				font-size: 1.6em;
+			    font-family: "Gotham";
+			    font-weight: 300;
+			    line-height: 1.5em;
+				margin-bottom: 3em;
+				display: inline-block;
+				color:$dark;
+			}
 		}
 	}
 	section.form{
@@ -56,5 +65,11 @@
 			    font-weight: 600;
 			}
 		}
+	}
+	.map{
+	    margin-top: 5em;
+	    clear: both;
+	    display: inline-block;
+	    width: 100%;
 	}
 }

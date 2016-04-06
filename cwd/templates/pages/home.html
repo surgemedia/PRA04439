@@ -69,3 +69,47 @@
 	</include>
 </div>
 </div>
+<script>
+/*===================================
+=            Modal Video            =
+===================================*/
+
+video = {
+  load : function(tag){
+    console.log("load video "+tag);
+    var id=$("#"+tag).data("videocode");
+    console.log("Loading Video");
+    player = new YT.Player(tag, {
+          // height: '1000',
+          // width: '1500',
+          videoId: id,
+          events: {
+            // 'onReady': onPlayerReady,
+            // 'onStateChange': onPlayerStateChange
+          }
+        });
+  }
+  
+};
+ 
+function stopVideo() {
+       player.stopVideo();
+     }
+
+function modalVideo(){
+  
+  $('#videoModal').on('hidden.bs.modal', function (e) {
+      stopVideo();
+     console.log("Stop Video");
+      
+    });
+}
+
+$(document).ready(function(){    
+  var delay=2000;
+  setTimeout(function(){
+    video.load('player');
+    modalVideo();
+  }, delay);
+});
+</script>

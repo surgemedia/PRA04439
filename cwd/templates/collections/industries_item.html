@@ -1,4 +1,12 @@
-[pbImage ImageName='Thumbnail' Visible='True' FilenameOnly='False']
-[pbContent RegionName="Company Name" StripHtml="False" Visible="False"]
 [pbContent RegionName="Excerpt" StripHtml="False" Visible="False"]
-[pbContent RegionName="Content Project" StripHtml="False" Visible="False"]
+
+
+<include src="organism/modal-item-content.html" 
+		 title="[pbContent RegionName='Company Name' StripHtml='True' Visible='True']"
+		 image="[pbImage ImageName='Thumbnail' Visible='True' FilenameOnly='True']"
+		 subTitle="[Item.Name]">
+	[pbContent RegionName="Content Project" StripHtml="False" Visible="True"]
+	<!-- [pbP/ageNav Mode='Previous' Text="Previous" ControlType='Link' CssClass='link previus preventNav'] 
+	[pbPag/eNav Mode='Next' Text="Next" ControlType='Link' CssClass='link next  preventNav'] -->
+
+</include>

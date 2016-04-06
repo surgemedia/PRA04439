@@ -1,5 +1,6 @@
 <div class="container-fluid">
-
+    <div id="parent" data-parentId="[Item.ParentId]" class="hidden"></div>
+    <div id="child" data-categoryId="[Item.Id]" class="hidden"></div>
 
 	<include src="molecule/card-left.html" 
 					 area="[Item.Name]"
@@ -30,31 +31,41 @@
 				 phone="[pbContent RegionName='Phone' StripHtml='True' Visible='True']"
 				 email="[pbContent RegionName='Email' StripHtml='True' Visible='True']"
 				 info="[pbContent RegionName='Content Item' StripHtml='True' Visible='True']"
-				 image="[pbImage ImageName='Photo' Visible='True' FilenameOnly='True']"
+				 image="[pbImage ImageName='Photo' Visible='True' FilenameOnly='True' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg']"
 				 background="grey">
 			</include>	 
 		[/ItemTemplate]
 	[/pbAdvCollection]
 
-	<pre class="col-lg-3 pull-right">
-	
-	<h2>Menu</h2>
-		[pbAdvCategory collection="0db4b566-be31-4d4d-845a-85c210cf711a" ShowInvisible="True" ShowInactive="True" ]
-		
-			[ItemTemplate]
-				[item.name]
-				[pbAdvCategory ShowInvisible="True" ShowInactive="True" ]
-		
-					[ItemTemplate]
+	<div class="col-lg-3 sidebar-industries pull-right">
+		<div class="wrapper">
+			<div id="currentSummary">
+        	</div>
+			[pbAdvCategory collection="0db4b566-be31-4d4d-845a-85c210cf711a" ShowInvisible="True" ShowInactive="True" ]
+				[ItemTemplate]
+					<ul data-id="[item.Id]" class="category">
+						<li class="summary-block">
+						<a data-url="[Item.PageUrl]" role="button" data-toggle="collapse" href="#collapse[Item.Id]" aria-expanded="false" aria-controls="collapse[Item.Id]">
+						<h3 class="title">
 						[item.name]
-					[/ItemTemplate]
-				
-				[/pbAdvCategory]
-			[/ItemTemplate]
-		
-		[/pbAdvCategory]
-		
-	</pre>
+</h3>
+</a>
+						<p class="summary">[item.summary]</p>
+						</li>
+						<li class="collapse" id="collapse[Item.Id]">
+							<ul class="subcategory">
+								[pbAdvCategory ShowInvisible="True" ShowInactive="True"]
+									[ItemTemplate]
+										<li><h3><small><a href="[Item.PageUrl]">[item.name]</a></small></h3></li>
+									[/ItemTemplate]
+								[/pbAdvCategory]
+							</ul>
+						</li>
+					</ul>
+				[/ItemTemplate]
+			[/pbAdvCategory]
+		</div>
+	</div>
 
 	<include src="molecule/card-left.html" 
 					 area="[Item.Name]"
@@ -77,16 +88,20 @@
 		[pbContent RegionName="Content Category" StripHtml="False" Visible="True" ] 
 	</div>
 
-	<div class="col-lg-12 projects">
+	<div class="col-lg-12 lower-cards">
+		<h2>[Item.Name] Projects</h2>
+
 		<div class="row-special">
 			[pbAdvCollection MaxItems="4"]
 				[ItemTemplate]
 					<include src="molecule/card-project.html" 
 						 title="[pbContent RegionName='Company Name' StripHtml='True' Visible='True']"
 						 subTitle="[Item.Name]"
-						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True']"
-						 link="[Item.PageUrl]">
+						 image="[pbImage ImageName='thumbnail' Visible='True' FilenameOnly='True' NoImageUrl='']"
+						 link="[Item.PageUrl]"
+						 class="col-lg-6">
 						 [pbContent RegionName="excerpt" StripHtml="True" Visible="True"] 
+
 					</include>	
 				[/ItemTemplate]
 			[/pbAdvCollection]
@@ -94,3 +109,45 @@
 	</div>
 	
 </div>
+
+<include src="organism/modal.html"></include>
+
+<script type="text/javascript">
+	var projects={
+			
+			    	[pbAdvCollection]
+				        [ItemTemplate]
+				         "[Item.ID]":"[Item.PageUrl]",
+				        [/ItemTemplate]
+						[LastItemTemplate]
+						 "[Item.ID]":"[Item.PageUrl]"
+						[/LastItemTemplate]
+					[/pbAdvCollection]
+			
+		};
+var parentId = jQuery("#parent").data("parentid");		
+if("0db4b566-be31-4d4d-845a-85c210cf711a"==parentId){
+	parentId = jQuery("#child").data("categoryid");
+}
+//get rid of the menu
+jQuery('[data-id="'+parentId+'"] ul').remove();
+//clone the summary block
+var tempSummary = jQuery('[data-id="'+parentId+'"] .summary-block').clone().html();
+//delete summary and title block;
+jQuery('[data-id="'+parentId+'"] .summary-block').remove();
+//delete other summary area
+jQuery('#sidebarNav .summary-block .summary').remove();
+//appends cloned element to the top
+jQuery(tempSummary).appendTo( "#currentSummary" );
+jQuery( "#currentSummary h3" ).unwrap();
+//removing other summaries
+jQuery(".category .summary").remove();		
+jQuery(".category .subcategory").each(function(){
+	if(!(jQuery(this).has("li").length)){
+	  var link = jQuery(this).parent().siblings().find('a');
+	  var url = link.data("url");
+	  var title = link.find("h3").unwrap();
+	  title.wrap("<a href='"+url+"'></a>");
+	}
+});	
+	</script>
