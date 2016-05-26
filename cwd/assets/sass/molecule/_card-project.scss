@@ -14,7 +14,8 @@
 	.shade{
 		position: absolute;
     bottom: 0;
-    height: 9em;
+    min-height: 9em;
+    height:auto;
     background: rgba(0,0,0,.5);
     width: 100%;
     padding: 2em;

@@ -10,28 +10,34 @@
 		}
 		.footer{
 			border-top: 2px solid #fff;
-    	height: 9em;
-    	text-align: center;
-    	.next,.prev{
-    		line-height: 7;
-    		text-transform: uppercase;
-    	}
-    	.download,
-    	.print,
-    	.social{
-    		display: inline-block;
-		    height: 6em;
-		    padding-top: 3em;
-		    text-transform: uppercase;
-		    min-width: 86px;
-		    div{
-		    	padding-top:.5em;
-		    	i{
-		    		padding:0 .5em;
-		    		font-size: 2em;
-		    	}
-		    }
-    	}
+	    	height: 9em;
+	    	text-align: center;
+	    	.next,.prev{
+	    		line-height: 7;
+	    		text-transform: uppercase;
+	    	}
+	    	.download{
+	    		display: none;
+	    	}
+	    	.download,
+	    	.print,
+	    	.social{
+	    		display: inline-block;
+			    height: 6em;
+			    padding-top: 3em;
+			    text-transform: uppercase;
+			    min-width: 86px;
+			    div{
+			    	padding-top:.5em;
+			    	a{
+			    		color:#000;
+				    	i{
+				    		padding:0 .5em;
+				    		font-size: 1.5em;
+				    	}
+			    	}
+			    }
+	    	}
 		}
 	}
 }

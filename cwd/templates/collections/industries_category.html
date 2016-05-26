@@ -1,43 +1,8 @@
-<div class="container-fluid">
+<div class="">
     <div id="parent" data-parentId="[Item.ParentId]" class="hidden"></div>
     <div id="child" data-categoryId="[Item.Id]" class="hidden"></div>
-
-	<include src="molecule/card-left.html" 
-					 area="[Item.Name]"
-					 groupName="Products"
-					 icon="tools"
-					 background="red">
-	[pbAdvCollection Collection="122cad56-53f9-4b32-98a2-4082d69c4b2a" Mode="RelatedToCategory"]
-		[HeaderTemplate]
-			<!--Products-->
-			<ul>
-		[/HeaderTemplate]
-		[ItemTemplate]
-				<li>
-					<a href="[Item.PageUrl]">[Item.Name]</a>
-				</li>
-		[/ItemTemplate]
-		[FooterTemplate]
-			</ul>
-		[/FooterTemplate]
-	[/pbAdvCollection]
-	</include>
 	
-	[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Mode="RelatedToCategory" MaxItems="1"]
-		[ItemTemplate]
-			<!--We need to get the name of the category for Your %Category% Contact-->
-			<include src="molecule/card-contact.html" 
-				 name="[Item.Name]"
-				 phone="[pbContent RegionName='Phone' StripHtml='True' Visible='True']"
-				 email="[pbContent RegionName='Email' StripHtml='True' Visible='True']"
-				 info="[pbContent RegionName='Content Item' StripHtml='True' Visible='True']"
-				 image="[pbImage ImageName='Photo' Visible='True' FilenameOnly='True' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg']"
-				 background="grey">
-			</include>	 
-		[/ItemTemplate]
-	[/pbAdvCollection]
-
-	<div class="col-lg-3 sidebar-industries pull-right">
+	<div class="col-lg-3 sidebar-industries pull-right visible-lg-block">
 		<div class="wrapper">
 			<div id="currentSummary">
         	</div>
@@ -46,10 +11,10 @@
 					<ul data-id="[item.Id]" class="category">
 						<li class="summary-block">
 						<a data-url="[Item.PageUrl]" role="button" data-toggle="collapse" href="#collapse[Item.Id]" aria-expanded="false" aria-controls="collapse[Item.Id]">
-						<h3 class="title">
-						[item.name]
-</h3>
-</a>
+							<h3 class="title">
+							[item.name]
+							</h3>
+						</a>
 						<p class="summary">[item.summary]</p>
 						</li>
 						<li class="collapse" id="collapse[Item.Id]">
@@ -66,27 +31,69 @@
 			[/pbAdvCategory]
 		</div>
 	</div>
+	<div class="push-left col-xs-12 col-lg-3">
+		<div class="row">
+			<include src="molecule/card-left.html" 
+							 area="[Item.Name]"
+							 groupName="Products"
+							 icon="tools"
+							 background="red">
+				[pbAdvCollection Collection="122cad56-53f9-4b32-98a2-4082d69c4b2a" Mode="RelatedToCategory"]
+					[HeaderTemplate]
+						<!--Products-->
+						<ul>
+					[/HeaderTemplate]
+					[ItemTemplate]
+							<li>
+								<a class="link preventNav" data-objectid="[item.id]" href="[Item.PageUrl]">[Item.Name]</a>
+							</li>
+					[/ItemTemplate]
+					[FooterTemplate]
+						</ul>
+					[/FooterTemplate]
+				[/pbAdvCollection]
+			</include>
+			
+			
+			
+			<include src="molecule/card-left.html" 
+							 area="[Item.Name]"
+							 groupName="News"
+							 icon="news"
+							 background="grey">
+				[pbAdvCollection Collection="news" Mode="RelatedToCategory" MaxItems="1"]
+					
+					[ItemTemplate]
+							
+							<p>[Item.Summary] </p>
+							
+							<a href="[Item.PageUrl]">Read More</a>				
+					[/ItemTemplate]
+					
+				[/pbAdvCollection]
+			</include>
+		</div>
+	</div>
+	
+	[pbAdvCollection Collection="366b993a-1488-4515-9d5b-f98b9cc4a645" Mode="RelatedToCategory" MaxItems="1"]
+		[ItemTemplate]
+			<!--We need to get the name of the category for Your %Category% Contact-->
+			<include src="molecule/card-contact.html" 
+				 name="[Item.Name]"
+				 phone="[pbContent RegionName='Phone' StripHtml='True' Visible='True']"
+				 email="[pbContent RegionName='Email' StripHtml='True' Visible='True']"
+				 info="[pbContent RegionName='Content Item' StripHtml='True' Visible='True']"
+				 image="[pbImage ImageName='Photo' Visible='True' FilenameOnly='True' NoImageUrl='/site/defaultsite/filesystem/images/default_player.jpg']"
+				 background="grey">
+			</include>	 
+		[/ItemTemplate]
+	[/pbAdvCollection]
 
-	<include src="molecule/card-left.html" 
-					 area="[Item.Name]"
-					 groupName="News"
-					 icon="news"
-					 background="grey">
-		[pbAdvCollection Collection="news" Mode="RelatedToCategory" MaxItems="1"]
-			
-			[ItemTemplate]
-					
-					<p>[Item.Summary] </p>
-					
-					<a href="[Item.PageUrl]">Read More</a>				
-			[/ItemTemplate]
-			
-		[/pbAdvCollection]
-	</include>
-		
-	<div class="industries-content col-lg-6">
+	<div class="industries-content col-xs-12 col-lg-6 pull-right">
 		[pbContent RegionName="Content Category" StripHtml="False" Visible="True" ] 
 	</div>
+
+		
 
 	<div class="col-lg-12 lower-cards">
 		<h2>[Item.Name] Projects</h2>
@@ -131,6 +138,24 @@
 					[/pbAdvCollection]
 			
 		};
+	
+	var products={
+		[pbAdvCollection Collection="122cad56-53f9-4b32-98a2-4082d69c4b2a" Mode="RelatedToCategory"]
+			[ItemTemplate]
+				"[Item.Id]":"[Item.PageUrl]",
+			[/ItemTemplate]
+			[LastItemTemplate]
+				"[Item.ID]":"[Item.PageUrl]"
+			[/LastItemTemplate]
+		[/pbAdvCollection]
+	};
+
+   
+	$( document ).ready(function() {
+     Popups.linkPopups('.card-project .link','.ajax-content',projects);
+   	 Popups.linkPopups('.card-left .link','.ajax-content',products);
+	});
+	
 var parentId = jQuery("#parent").data("parentid");		
 if("0db4b566-be31-4d4d-845a-85c210cf711a"==parentId){
 	parentId = jQuery("#child").data("categoryid");
@@ -156,4 +181,5 @@ jQuery(".category .subcategory").each(function(){
 	  title.wrap("<a href='"+url+"'></a>");
 	}
 });	
+	
 	</script>

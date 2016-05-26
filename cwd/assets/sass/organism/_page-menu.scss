@@ -4,6 +4,8 @@
     overflow: hidden;
 	position:absolute;
 	bottom:-7px;
+	left:0;
+	z-index:0;
 	h2 {
 		font-weight: 300;
 		margin: 0;
@@ -30,7 +32,7 @@
 	    float: left;
 	    clear: both;
 		min-width: 26.3em;
-		    
+		width:100%;
 		a {
 			// border-bottom:0.7em solid rgba($red,0);
 		    display: inline-block;

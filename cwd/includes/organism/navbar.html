@@ -10,10 +10,29 @@
       <a class="navbar-brand" href="/">
       <img src="@@logo" alt="Pracitcal Engineering"></a>
     </div>
-    <div class="collapse navbar-collapse col-md-6 pull-right" id="main-nav">
-      [pbBasicSearch ButtonText="" ResultsPage="search-results"]
-        
+    <div class="collapse navbar-collapse col-lg-6 pull-right" id="main-nav">
       [pbSiteMenu ShowCategories="True" CategoryDepth="2"]
+      <div class="search-menu">
+        [pbBasicSearch ButtonText="" ResultsPage="search-results"]
+      </div>
+      <div class="social-icons">
+        <ul>
+         <li>
+            <a class="mail" href="mailto:[pbSiteValue key='OwnerEmail']">
+              <i class="pe-icon-email"></i>
+            </a>
+            <a class="phone" href=""><i class="pe-icon-telephone"></i>
+            </a>
+            <a href="[pbContentEx RegionName="Googlemap Link" StripHtml='True' PageName='Contact us']" target="_blank"><i class="pe-icon-map"></i>
+            </a>
+         </li>
+        <li>
+          <a href="[pbContentEx RegionName="Youtube Link" StripHtml='True' PageName='Contact us']" target="_blank"><i class="pe-icon-youtube"></i></a>
+          <a href="[pbContentEx RegionName="Linkedin Link" StripHtml='True' PageName='Contact us']" target="_blank"><i class="pe-icon-linkedin"></i></a>
+        </li>
+        
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

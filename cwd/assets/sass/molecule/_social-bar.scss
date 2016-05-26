@@ -17,21 +17,27 @@
 		&:hover {
 			color:$red;
 			div{
-				width:180px;
-				transition: .3s ease width;
 				
+				transition: .3s ease width;
+				padding: 1.5em 3em 1.5em 1em;
+				
+				width:250px;
 			}
 		}
 		div{
 			transition: .3s ease width;
 			position: absolute;
-		    right: 99px;
+		    right: 66px;
 		    background-color: $dark;
 		    font-size: .5em;
-		    padding: 1.5em 1em;
+		    padding: 1.5em 0;
 		    overflow: hidden;
 		    width: 0px;
-		    word-break: none;
+		   
+		    span{
+		    	width: 180px;
+		    	display: block;
+		    }
 		}
 		&.mail{
 			div{

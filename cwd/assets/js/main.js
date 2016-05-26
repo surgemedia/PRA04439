@@ -169,50 +169,68 @@ var Navigation = {
   }
 }
 
+/*=======================================
+=            Phone tag Href            =
+=======================================*/
+  function phoneTag(tag){
+
+  }
+
+
 
 /*===============================
 =    Popups           =
 ===============================*/
 var Popups = {
-  showContent: function(element, url, getContentSelector) {
+  showContent: function(element, url, getContentSelector,itemId,array) {
     $.ajax({
       url: url,
       context: $(getContentSelector)
     }).success(function(data){
       var modifiedContent = $(data).find(getContentSelector);
       $('#contentDisplay .modal-body').html(modifiedContent);
+      $('#contentDisplay').data('item',itemId);
+      $('#contentDisplay').data('array',array);
       // $('#contentDisplay .modal-body .previous').html(previous);
       // $('#contentDisplay .modal-body .next').html(next);
       $('#contentDisplay').modal('show');
        
       });
   },
-  linkPopups: function(element,getContentSelector) {
+  linkPopups: function(element,getContentSelector,array) {
     $(element).click(function(event) {
       event.preventDefault();
       var url = this.href;
+      var itemId = $(this).data('objectid');
           // next = this.siblings(".link.next"),
           // previuos = this.siblings(".link.previous");
-      Popups.showContent(element,url,getContentSelector);
+      Popups.showContent(element,url,getContentSelector,itemId,array);
+    });
+  },
+  navbuttons: function(element) {
+    $(element).click(function(event) {
+      event.preventDefault();
+      var new_position = projectList.indexOf($('#contentDisplay').data('position'));
+      $('[data-objectid='+projectList[new_position]+']').attr('href');
+      //Popups.showContent(element,url,getContentSelector,position);
     });
   }
 }
-
+  
   Navigation.closeSubNavs();
   Popups.linkPopups('.card-project .link','.ajax-content');
-  Popups.linkPopups('.ajax-content .link','.ajax-content');
+  
 
 
 /*==================================================
 =            Get Index of Obj from Attr            =
 ==================================================*/
 var getIndexIfObjWithOwnAttr = function(array, attr) {
-    for(var i = 0; i < Object.keys(array).length; i++) {
+   
         if(array.hasOwnProperty(attr)) {
-            return i;
+            return Object.keys(array).indexOf(attr);
         }
-    }
-    return -1;
+      return -1;
 }
 
 
@@ -232,10 +250,113 @@ var getAttrValueByIndex = function(array, index) {
 
 getIndexIfObjWithOwnAttr;
 getAttrValueByIndex;
-    $('#contentDisplay').on('shown.bs.modal', function () {
+   /* $('#contentDisplay').on('shown.bs.modal', function () {
        var id=$("#contentDisplay #item-id").html();
        var currentIndex= getIndexIfObjWithOwnAttr(projects,id);
-       $("#contentDisplay .next").prop("href",getAttrValueByIndex(cuurentIndext+1));
+       $("#contentDisplay .next").prop("href",getAttrValueByIndex(currentIndex+1));
        console.log("modal Loaded");
     }) 
+*/
+/*====================================
+=            Social Links            =
+====================================*/
 
+function appendShareLinks() {
+    var fbLink = 'https://www.facebook.com/sharer/sharer.php?u='+location.href,
+    twLink = 'https://twitter.com/home?status='+location.href,
+    gpLink = 'https://plus.google.com/share?url='+location.href,
+    ldLink = 'https://www.linkedin.com/shareArticle?mini=true&url='+location.href+'&title=Maxconnect&summary=&source=';
+    if($("a.fbLink").length>0) {
+        $("a.fbLink").attr('href',fbLink);
+    }
+    if($("a.twLink").length>0) {
+        $("a.twLink").attr('href',twLink);
+    }
+    if($("a.gpLink").length>0) {
+        $("a.gpLink").attr('href',gpLink);
+    }
+    if($("a.ldLink").length>0) {
+        $("a.ldLink").attr('href',ldLink);
+    }
+}
+appendShareLinks();
+
+
+/*=========================================
+=          Next & Prev Modal Item         =
+=========================================*/
+
+function getNext(){
+  var array= $('#contentDisplay').data('array');
+  var item = $('#contentDisplay').data('item');
+  var index = getIndexIfObjWithOwnAttr(array,item);
+  var length = Object.keys(array).length;
+  var nextIndex= 0;
+  console.log("length: "+length);
+  console.log("index: "+index);
+
+  
+  if (index < (length-1)){
+    nextIndex=index+1;
+  }
+    $.ajax({
+    url: getAttrValueByIndex(array, nextIndex),
+    context: $(".ajax-content")
+    }).success(function(data){
+      var modifiedContent = $(data).find(".ajax-content");
+      $('#contentDisplay .modal-body').html(modifiedContent);
+      $('#contentDisplay').data('item', Object.keys(array)[nextIndex]);
+    }); 
+}
+
+function getPrev(array){
+  var array= $('#contentDisplay').data('array');
+  var item = $('#contentDisplay').data('item');
+  var index = getIndexIfObjWithOwnAttr(array,item);
+  var length = Object.keys(array).length;
+  var prevIndex= 0;
+  console.log("length: "+length);
+  console.log("index: "+index);
+
+  
+  if (0 == index){
+    prevIndex=length-1;
+  }else{
+    prevIndex=index-1;
+  }
+
+    $.ajax({
+    url: getAttrValueByIndex(array, prevIndex),
+    context: $(".ajax-content")
+    }).success(function(data){
+      var modifiedContent = $(data).find(".ajax-content");
+      $('#contentDisplay .modal-body').html(modifiedContent);
+      $('#contentDisplay').data('item', Object.keys(array)[prevIndex]);
+    }); 
+}
+
+var owl = jQuery(".owl-carousel");
+
+  owl.owlCarousel({
+    
+    
+    
+   
+    margin:0,
+    
+    
+    responsive:{
+        0:{
+            items:1,
+            dots:true,
+            center:true,
+           
+       },
+        1200:{
+            items:3,
+            nav:false,
+            center:false,
+        }
+    }
+
+  });

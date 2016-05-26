@@ -20,6 +20,7 @@
 @import "molecule/social-bar";
 @import "molecule/breadcrumbs";
 @import "molecule/search";
+@import "molecule/search-result";
 @import "molecule/headshot";
 @import "molecule/sidebar-categories";
 @import "molecule/sidebar-industries";
@@ -34,6 +35,7 @@
 @import "organism/contact-us";
 @import "organism/modal-item-content";
 @import "organism/modal";
+@import "organism/calculators";
 @import "organism/lower-cards";
 
 
@@ -44,4 +46,25 @@
 @import "template/services"; 
 @import "template/news"; 
 
+/*----------  RESPONSIVE  ----------*/
+
+
+@media (max-width: $screen-sm-max) {
+	@import "res/res-xs-sm";
+}
+@media (max-width: $screen-xs-max) {
+	@import "res/res-xs";
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@import "res/res-sm";
+}
+@media (min-width: $screen-md-min) {
+	@import "res/res-md-lg";
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@import "res/res-md";
+}
+@media (min-width: $screen-lg-min) {
+	@import "res/res-lg";
+}
 

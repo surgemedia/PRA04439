@@ -1,6 +1,6 @@
 .card-left{
-	
-	height: 41.3em;
+	margin-bottom: 2em;
+	min-height: 41.3em;
 	i{
 		font-size: 6em;
 	}
@@ -8,6 +8,7 @@
 		list-style: none;
 		padding: 0;
 		li{
+			margin-bottom: 1em;
 			a{
 			  color:#fff;
 
@@ -26,10 +27,10 @@
 	}
 	.wrapper{
 		display: inline-block;
-    height: 100%;
-    width: 100%;
-    padding: 10% 6%;
-
+	    height: 100%;
+	    width: 100%;
+	    padding: 10% 6%;
+		min-height: 41.3em;
 	}
 	.red{
 		color: #fff;
@@ -39,6 +40,6 @@
 	.grey{
 		color: $dark;
 		background-color: $grey;
-		 margin-top: 2em;
+		
 	}
 }

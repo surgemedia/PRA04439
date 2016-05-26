@@ -3,15 +3,12 @@
 	<section class="col-md-12">
 		<p class="leading">
 			[pbContent RegionName="Content Top" StripHtml="False" Visible="True" ]
-			
-		</p>
+	</p>
 	</section>
 </main>
 <div class="container-fluid">
-
-
 		<include src="molecule/card.html" 
-						 class="red col-md-4" 
+						 class="red col-lg-4" 
 						 img="[pbImage ImageName='Left Box Image' StripHtml='False' Visible='True' FilenameOnly='True' ]" 
 						 title="[pbContent RegionName='Left Box Title' StripHtml='False' Visible='True' ]"
 						 linkPage="[pbContent RegionName='Left Box Url' StripHtml='True' Visible='True' ]">
@@ -21,7 +18,7 @@
 		</include>
 
 		<include src="molecule/card.html" 
-						 class="grey col-md-4" 
+						 class="grey col-lg-4" 
 						 img="[pbImage ImageName='Center Box Image' StripHtml='False' Visible='True' FilenameOnly='True']" 
 						 title="[pbContent RegionName='Center Box Title' StripHtml='False' Visible='True' ]"
 						 linkPage="[pbContent RegionName='Center Box Url' StripHtml='True' Visible='True' ]">
@@ -31,7 +28,7 @@
 		</include>
 
 		<include src="molecule/card.html" 
-						 class="dark col-md-4" 
+						 class="dark col-lg-4" 
 						 img="[pbImage ImageName='Right Box Image' StripHtml='False' Visible='True' FilenameOnly='True']" 
 						 title="[pbContent RegionName='Right Box Title' StripHtml='False' Visible='True' ]"
 						 linkPage="[pbContent RegionName='Right Box Url' StripHtml='True' Visible='True' ]">
@@ -45,13 +42,15 @@
 <div id="bottom-card">
 	<include src="molecule/card-icon.html" 
 					 title="[pbContent RegionName='MiniBox 1 Title' StripHtml='' Visible='True' ]" 
-					 icon="pe-icon-projects"  >
+					 icon="pe-icon-projects"
+					 link="/industries.aspx" >
 		[pbContent RegionName="MiniBox 1 Content" StripHtml="False" Visible="True" ] 
 	</include>
 
 	<include src="molecule/card-icon.html" 
 					 title="[pbContent RegionName='MiniBox 2 Title' StripHtml='' Visible='True' ]" 
-					 icon="pe-icon-about"  >
+					 icon="pe-icon-about"
+					 link="/about-us/who-we-are">
 		[pbContent RegionName="MiniBox 2 Content" StripHtml="False" Visible="True" ] 
 	</include>
 	
@@ -64,7 +63,8 @@
 	</include>
 	<include src="molecule/card-icon.html" 
 					 title="[pbContent RegionName='MiniBox 3 Title' StripHtml='' Visible='True' ]" 
-					 icon="pe-icon-news"  >
+					 icon="pe-icon-news" 
+					 link="/news" >
 		[pbContent RegionName="MiniBox 3 Content" StripHtml="False" Visible="True" ] 
 	</include>
 </div>

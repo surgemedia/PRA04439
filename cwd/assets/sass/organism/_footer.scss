@@ -61,11 +61,23 @@
 		}
 	}
 	.info{
-		a:after{
-			content:"|";
+		display: block;
+		text-align: center;
+		li p,
+		li{
+			display: inline-block;
 		}
-		a:last-child:after{
+		li:after{
 			content:"";
+			font-size: 1.5em;
+			margin-left: 2em;
+			margin-right: 2em;
+			border-left: 1px solid;
+			
+		}
+		li:last-child:after{
+			content:"";
+			border-left: 0;
 		}	
 	}
 }
